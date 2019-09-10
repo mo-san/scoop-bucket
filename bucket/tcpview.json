@@ -1,0 +1,46 @@
+{
+    "homepage": "https://docs.microsoft.com/en-us/sysinternals/",
+    "description": "Active socket command-line viewer.",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://docs.microsoft.com/en-us/sysinternals/license-terms"
+    },
+    "version": "3.05",
+    "url": "https://download.sysinternals.com/files/TCPView.zip",
+    "hash": "34f8d739d8c1dec3021812f1878fc7b802d4dddbb0d7e83a30adf5d1dcc515fa",
+    "checkver": {
+        "url": "https://docs.microsoft.com/en-us/sysinternals/downloads/tcpview",
+        "re": "TCPView\\s(?:v|V)?([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://download.sysinternals.com/files/TCPView.zip"
+    },
+    "architecture": {
+        "32bit": {
+            "bin": [
+                "Tcpview.exe",
+                "Tcpvcon.exe"
+            ],
+            "shortcuts": [
+                [
+                    "Tcpview.exe",
+                    "SysInternals/TCPView",
+                    "/accepteula"
+                ]
+            ]
+        },
+        "64bit": {
+            "bin": [
+                "Tcpview.exe",
+                "Tcpvcon.exe"
+            ],
+            "shortcuts": [
+                [
+                    "Tcpview.exe",
+                    "SysInternals/TCPView",
+                    "/accepteula"
+                ]
+            ]
+        }
+    }
+}
