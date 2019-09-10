@@ -1,0 +1,39 @@
+{
+    "$schema": "https://raw.githubusercontent.com/lukesampson/scoop/master/schema.json",
+    "version": "0",
+    "description": "",
+    "homepage": "https://github.com/namazso/OpenHashTab",
+    "license": "GPL-3.0-or-later",
+    "notes": "",
+    "url": "-",
+    "hash": "0000000000000000000000000000000000000000000000000000000000000000",
+    "innosetup": true,
+    "extract_dir": "",
+    "pre_install": [
+        ""
+    ],
+    "installer": {
+        "script": [
+            ""
+        ]
+    },
+    "uninstaller": {
+        "script": [
+            ""
+        ]
+    },
+    "bin": "",
+    "shortcuts": [
+        [
+            "",
+            ""
+        ]
+    ],
+    "persist": [
+        ""
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/namazso/OpenHashTab/releases/download/v$version/OpenHashTab_setup.exe"
+    }
+}
