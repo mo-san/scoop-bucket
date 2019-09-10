@@ -1,0 +1,46 @@
+{
+    "homepage": "https://docs.microsoft.com/en-us/sysinternals/",
+    "description": "Find out what files, registry keys and other objects processes have open, which DLLs they have loaded, and more.",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://docs.microsoft.com/en-us/sysinternals/license-terms"
+    },
+    "version": "16.30",
+    "url": "https://download.sysinternals.com/files/ProcessExplorer.zip",
+    "hash": "8e7d9ca5085b1a817f16889b3c123cae9bc4e76b70c4bb02c8c823f35c0db428",
+    "checkver": {
+        "url": "https://docs.microsoft.com/en-us/sysinternals/downloads/process-explorer",
+        "re": "Process Explorer\\s(?:v|V)?([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://download.sysinternals.com/files/ProcessExplorer.zip"
+    },
+    "architecture": {
+        "32bit": {
+            "bin": "procexp.exe",
+            "shortcuts": [
+                [
+                    "procexp.exe",
+                    "SysInternals/Process Explorer",
+                    "/accepteula"
+                ]
+            ]
+        },
+        "64bit": {
+            "bin": [
+                [
+                    "procexp64.exe",
+                    "procexp"
+                ],
+                "procexp64.exe"
+            ],
+            "shortcuts": [
+                [
+                    "procexp64.exe",
+                    "SysInternals/Process Explorer",
+                    "/accepteula"
+                ]
+            ]
+        }
+    }
+}
