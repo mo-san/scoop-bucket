@@ -5,9 +5,9 @@
         "identifier": "Freeware",
         "url": "https://docs.microsoft.com/en-us/sysinternals/license-terms"
     },
-    "version": "1.20",
+    "version": "1.21",
     "url": "https://download.sysinternals.com/files/WhoIs.zip",
-    "hash": "f4965fc138de2441999c7ad705f15d5274be8e5343f915ae11e1b7daa6ba5228",
+    "hash": "cd8a48c2d59c3e402d6ba23471723f30619e0d525ecdea7a2b84dbf301bf5eec",
     "checkver": {
         "url": "https://docs.microsoft.com/en-us/sysinternals/downloads/whois",
         "re": "Whois\\s(?:v|V)?([\\d.]+)"
