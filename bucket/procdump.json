@@ -5,9 +5,9 @@
         "identifier": "Freeware",
         "url": "https://docs.microsoft.com/en-us/sysinternals/license-terms"
     },
-    "version": "9.0",
+    "version": "10.0",
     "url": "https://download.sysinternals.com/files/Procdump.zip",
-    "hash": "9e089b3f25a85c58f901094e4126412bbef480bd7baef2a9039bdef328bf5baa",
+    "hash": "cf3ece5f2d9b39c35ca008e7016831213f5033ae4470fb64f396a3fbded17d19",
     "checkver": {
         "url": "https://docs.microsoft.com/en-us/sysinternals/downloads/procdump",
         "re": "ProcDump\\s(?:v|V)?([\\d.]+)"
