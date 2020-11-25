@@ -5,9 +5,9 @@
         "identifier": "Freeware",
         "url": "https://docs.microsoft.com/en-us/sysinternals/license-terms"
     },
-    "version": "12.02",
+    "version": "12.03",
     "url": "https://download.sysinternals.com/files/Sysmon.zip",
-    "hash": "bc26c6cb522d1ff658ebfc19c545811ce230cd45f3b62756d94fdb4356271280",
+    "hash": "f72d45bf9ca463e5102209685f643d6a60a9434ceb99461f9a2ea86613591146",
     "checkver": {
         "url": "https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon",
         "re": "Sysmon\\s(?:v|V)?([\\d.]+)"
