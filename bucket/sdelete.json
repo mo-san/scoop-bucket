@@ -5,9 +5,9 @@
         "identifier": "Freeware",
         "url": "https://docs.microsoft.com/en-us/sysinternals/license-terms"
     },
-    "version": "2.02",
+    "version": "2.04",
     "url": "https://download.sysinternals.com/files/SDelete.zip",
-    "hash": "d19cf1835d2024ddd9e67c0566aa5dab963c629f6ff8888fb0aebf0c2092caaf",
+    "hash": "49cfc704a431d0f4557d06561310ade7ba78b84c389a99cbe0fac83410f6b255",
     "checkver": {
         "url": "https://docs.microsoft.com/en-us/sysinternals/downloads/sdelete",
         "re": "SDelete\\s(?:v|V)?([\\d.]+)"
