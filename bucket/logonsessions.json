@@ -5,9 +5,9 @@
         "identifier": "Freeware",
         "url": "https://docs.microsoft.com/en-us/sysinternals/license-terms"
     },
-    "version": "1.4",
+    "version": "1.41",
     "url": "https://download.sysinternals.com/files/logonSessions.zip",
-    "hash": "116e748ceba543371cce0d3dffb4e13b9a91ee27ee28575aa34eda97ba97cf9c",
+    "hash": "19585b9d74a403cd0d5f7dbfe6e226b264816eb0cbd9a90bc030cfdd5d6abbec",
     "checkver": {
         "url": "https://docs.microsoft.com/en-us/sysinternals/downloads/logonsessions",
         "re": "LogonSessions\\s(?:v|V)?([\\d.]+)"
