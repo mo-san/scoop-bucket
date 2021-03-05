@@ -5,9 +5,9 @@
         "identifier": "Freeware",
         "url": "https://docs.microsoft.com/en-us/sysinternals/license-terms"
     },
-    "version": "January.11.2021",
+    "version": "March.1.2021",
     "url": "https://download.sysinternals.com/files/SysinternalsSuite-Nano.zip",
-    "hash": "e012276e1fe8da146c34eec218e265d8436daa72e638a6e24b016f99b4eec577",
+    "hash": "6e1840bf4dd78092f38f0152d92bd1d94fc75d953a1de965e87807b092e83ce6",
     "checkver": {
         "url": "https://docs.microsoft.com/en-us/sysinternals/downloads/sysinternals-suite",
         "re": "\\bUpdated:\\s*(\\w+)\\s+(\\d+),\\s+(\\d+)\\b",
