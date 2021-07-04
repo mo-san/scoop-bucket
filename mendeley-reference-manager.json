@@ -1,0 +1,26 @@
+{
+    "version": "2.51.0",
+    "description": "Mendeley Reference Manager",
+    "homepage": "https://www.mendeley.com/",
+    "license": "Proprietary",
+    "url": "https://static.mendeley.com/bin/desktop/mendeley-reference-manager-2.51.0.exe#/dl.7z",
+    "hash": "ffb12ee730afb494dd93856f7c5f0d3193aa9afa748750713b2778acba84b738",
+    "pre_install": [
+        "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
+        "Remove-Item \"$dir\\`$*\", \"$dir\\Uninst*\" -Force -Recurse"
+    ],
+    "bin": "Mendeley Reference Manager.exe",
+    "shortcuts": [
+        [
+            "Mendeley Reference Manager.exe",
+            "Mendeley Reference Manager"
+        ]
+    ],
+    "checkver": {
+        "url": "https://www.mendeley.com/release-notes-reference-manager",
+        "regex": "Reference Manager v([\\d.]+)</a>"
+    },
+    "autoupdate": {
+        "url": "https://static.mendeley.com/bin/desktop/mendeley-reference-manager-${version}.exe#/dl.7z"
+    }
+}

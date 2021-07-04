@@ -1,0 +1,22 @@
+{
+    "version": "2.0.10.1",
+    "description": "PupSQLite",
+    "homepage": "https://www.eonet.ne.jp/~pup/software.html",
+    "license": "",
+    "url": "https://dforest.watch.impress.co.jp/library/p/pupsqlite/12040/pupsqlite64_ver_2001001.zip",
+    "hash": "66dbbd4a47ece511d43dcb665fbaf690f24754fe590207fb52e4fe2514b4ef0c",
+    "bin": "PupSQLite.exe",
+    "shortcuts": [
+        [
+            "PupSQLite.exe",
+            "PupSQLite"
+        ]
+    ],
+    "checkver": {
+        "url": "https://forest.watch.impress.co.jp/library/software/pupsqlite/",
+        "regex": "<dd>v([\\d.]+).*</dd>"
+    },
+    "autoupdate": {
+        "url": "https://dforest.watch.impress.co.jp/library/p/pupsqlite/12040/pupsqlite64_ver_${majorVersion}0${minorVersion}${patchVersion}0${buildVersion}.zip"
+    }
+}

@@ -1,0 +1,45 @@
+{
+    "version": "4.02",
+    "description": "CLaunch",
+    "homepage": "https://hp.vector.co.jp/authors/VA018351/claunch.html",
+    "license": "Freeware",
+    "architecture": {
+        "64bit": {
+            "url": "https://ss1.xrea.com/pyonkichi.g1.xrea.com/archives/cl64_402.exe#/dl.7z",
+            "hash": "5519a749542dfcecb8800e2bceb4b7f42535cf76068f01d2cfde02a6fb80b177"
+        },
+        "32bit": {
+            "url": "https://ss1.xrea.com/pyonkichi.g1.xrea.com/archives/cl402.exe#/dl.7z",
+            "hash": "c889f37ae37bfb73d69df0bb8920fad0e82f029a790b0ec37ae637b922e89fcb"
+        }
+    },
+    "extract_dir": "",
+    "bin": "CLaunch.exe",
+    "shortcuts": [
+        [
+            "CLaunch.exe",
+            "CLaunch"
+        ]
+    ],
+    "post_install": [
+        "Remove-Item \"$dir\\Setup.exe\""
+    ],
+    "persist": [
+        "Data",
+        "Plugins"
+    ],
+    "checkver": {
+        "url": "https://hp.vector.co.jp/authors/VA018351/history_cl.html",
+        "regex": ">Ver\\. ([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://ss1.xrea.com/pyonkichi.g1.xrea.com/archives/cl64_${cleanVersion}.exe#/dl.7z"
+            },
+            "32bit": {
+                "url": "https://ss1.xrea.com/pyonkichi.g1.xrea.com/archives/cl${cleanVersion}.exe#/dl.7z"
+            }
+        }
+    }
+}

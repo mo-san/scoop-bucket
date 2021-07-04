@@ -1,0 +1,22 @@
+{
+    "version": "1.24",
+    "description": "pixFront",
+    "homepage": "http://pixtopo.main.jp/front_en/index.html",
+    "license": "",
+    "url": "https://master.dl.sourceforge.net/project/pixfront/setup_pixfont_x64_1_24_en.msi",
+    "hash": "sha1:135894221244fb567ac928eca7fedb28ae808b1e",
+    "bin": "QtFront.exe",
+    "shortcuts": [
+        [
+            "QtFront.exe",
+            "pixFront"
+        ]
+    ],
+    "checkver": {
+        "url": "https://www.vector.co.jp/soft/dl/winnt/art/se518166.html",
+        "regex": "<span class=\"version\">(.+)</span>"
+    },
+    "autoupdate": {
+        "url": "https://master.dl.sourceforge.net/project/pixfront/setup_pixfont_x64_${underscoreVersion}_en.msi"
+    }
+}

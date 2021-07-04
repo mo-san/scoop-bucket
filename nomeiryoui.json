@@ -1,0 +1,22 @@
+{
+    "version": "2.41",
+    "description": "noMeiryoUI: 'No!! Meiryo UI' (Meiryo UIも大っきらい!!)",
+    "homepage": "http://tatsu.life.coocan.jp/index.html",
+    "license": "MIT",
+    "url": "https://github.com/Tatsu-syo/noMeiryoUI/releases/download/TAG-2.41/noMeiryoUI241.zip",
+    "hash": "9acb61ab3c9e1d6ba1f0823ba777d4c418fbc0b67a04588442082317868c0293",
+    "bin": "noMeiryoUI.exe",
+    "shortcuts": [
+        [
+            "noMeiryoUI.exe",
+            "Meiryo UIも大っきらい!!"
+        ]
+    ],
+    "checkver": {
+        "url": "https://github.com/Tatsu-syo/noMeiryoUI/releases/latest",
+        "regex": "/releases/download/TAG-([\\d.]+)/(?<filename>noMeiryoUI.+\\.zip)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/Tatsu-syo/noMeiryoUI/releases/download/TAG-${version}/${matchFilename}"
+    }
+}

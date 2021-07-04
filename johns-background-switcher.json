@@ -1,0 +1,23 @@
+{
+    "version": "5.3.1",
+    "description": "John’s Background Switcher",
+    "homepage": "https://johnsad.ventures/software/backgroundswitcher/windows/",
+    "license": "Proprietary",
+    "url": "https://dl.johnsadventures.com/SwitcherSetup531.exe#/dl.7z",
+    "hash": "36dd2d18dbae935d85cd85ceb129f0b3161ac25d9c35cd52f3518959e9b33203",
+    "bin": "BackgroundSwitcher.exe",
+    "shortcuts": [
+        [
+            "BackgroundSwitcher.exe",
+            "BackgroundSwitcher"
+        ]
+    ],
+    "post_install": "Remove-Item \"$dir\\uninst.exe\",\"$dir\\`$PLUGINSDIR\" -Force -Recurse",
+    "checkver": {
+        "url": "https://johnsad.ventures/software/backgroundswitcher/windows/",
+        "regex": "<td>\\(Version ([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://dl.johnsadventures.com/SwitcherSetup${cleanVersion}.exe#/dl.7z"
+    }
+}

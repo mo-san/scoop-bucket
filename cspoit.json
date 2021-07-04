@@ -1,0 +1,27 @@
+{
+    "version": "2.2",
+    "description": "CSpoit: パワースポイト",
+    "homepage": "http://soft.utopiat.net/cspoit/",
+    "license": "Proprietary",
+    "url": "https://ftp.vector.co.jp/45/42/1859/cspoit.lzh",
+    "hash": "b6ab4c199150d7e8f844f6fd176c4738f9db68255f9fa1f5c2378d1dfd370c66",
+    "bin": "CSpoit.exe",
+    "shortcuts": [
+        [
+            "CSpoit.exe",
+            "パワースポイト"
+        ]
+    ],
+    "pre_install": [
+        "$path = \"$persist_dir\"; if (!(Test-Path $path)) { New-Item $path -ItemType Directory | Out-Null }",
+        "$path = \"$persist_dir\\CSpoit.ini\"; if (!(Test-Path $path)) { New-Item $path -ItemType File | Out-Null }"
+    ],
+    "persist": "CSpoit.ini",
+    "checkver": {
+        "url": "https://www.vector.co.jp/soft/dl/win95/art/se187189.html",
+        "regex": "<span class=\"version\">(.+)</span>"
+    },
+    "autoupdate": {
+        "url": "https://ftp.vector.co.jp/45/42/1859/cspoit.lzh"
+    }
+}

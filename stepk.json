@@ -1,0 +1,45 @@
+{
+    "version": "1.03e",
+    "description": "STEP_K",
+    "homepage": "https://kobarin.sakura.ne.jp/",
+    "license": "GPL-2.0-only",
+    "url": "https://dforest.watch.impress.co.jp/library/s/step_k/11685/STEP_K_103e.exe#/dl.7z",
+    "hash": "b2736ac9cb85c0bc89c5d3579564c123f82c47a856e362c68ba76afb4fcf4148",
+    "extract_dir": "STEP_K_103e",
+    "architecture": {
+        "64bit": {
+            "bin": "x64\\SuperTagEditor.exe",
+            "shortcuts": [
+                [
+                    "x64\\SuperTagEditor.exe",
+                    "STEP_K"
+                ]
+            ]
+        },
+        "32bit": {
+            "bin": "x86\\SuperTagEditor.exe",
+            "shortcuts": [
+                [
+                    "x86\\SuperTagEditor.exe",
+                    "STEP_K"
+                ]
+            ]
+        }
+    },
+    "pre_install": [
+        "$path = \"$persist_dir\"; if (!(Test-Path $path)) { New-Item $path -ItemType Directory | Out-Null }",
+        "$path = \"$persist_dir\\SuperTagEditor(x64).ini\"; if (!(Test-Path $path)) { New-Item $path -ItemType File | Out-Null }",
+        "$path = \"$persist_dir\\SuperTagEditor(x86).ini\"; if (!(Test-Path $path)) { New-Item $path -ItemType File | Out-Null }"
+    ],
+    "persist": [
+        ["x64\\SuperTagEditor.ini", "SuperTagEditor(x64).ini"],
+        ["x86\\SuperTagEditor.ini", "SuperTagEditor(x86).ini"]
+    ],
+    "checkver": {
+        "url": "https://forest.watch.impress.co.jp/library/software/step_k/",
+        "regex": "<dd>v(.+)（.+</dd>"
+    },
+    "autoupdate": {
+        "url": "https://dforest.watch.impress.co.jp/library/s/step_k/11685/STEP_K_${cleanVersion}.exe"
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "version": "2.6.1",
+    "description": "Leeyes: 見開き画像ビューア",
+    "homepage": "http://www3.tokai.or.jp/boxes/leeyes/",
+    "license": "Freeware",
+    "url": "https://ftp.vector.co.jp/56/24/2779/leeyes261.zip",
+    "hash": "43c260fa50c7e7bebc82cfd99f90a24a0e2e4d16b9010226023adc090017d8bd",
+    "bin": "Leeyes.exe",
+    "shortcuts": [
+        [
+            "Leeyes.exe",
+            "Leeyes"
+        ]
+    ],
+    "pre_install": [
+        "$path = \"$persist_dir\"; if (!(Test-Path $path)) { New-Item $path -ItemType Directory | Out-Null }",
+        "$path = \"$persist_dir\\Leeyes.ini\"; if (!(Test-Path $path)) { New-Item $path -ItemType File | Out-Null }"
+    ],
+    "persist": "Leeyes.ini",
+    "checkver": {
+        "url": "https://www.vector.co.jp/soft/dl/winnt/art/se381425.html",
+        "regex": "<span class=\"version\">(.+)</span>"
+    },
+    "autoupdate": {
+        "url": "https://ftp.vector.co.jp/56/24/2779/leeyes${cleanVersion}.zip"
+    }
+}

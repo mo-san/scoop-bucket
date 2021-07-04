@@ -1,0 +1,28 @@
+{
+    "version": "8.4",
+    "description": "Flexible Renamer",
+    "homepage": "http://hp.vector.co.jp/authors/VA014830/FlexRena/",
+    "license": "Freeware",
+    "url": "https://dforest.watch.impress.co.jp/library/f/flexrenamer/10463/FlexRena84.zip",
+    "hash": "5cf6db71126af9dbc17eb652a08a6aaf340bf80b5768c3de21876eaaeeebe616",
+    "extract_dir": "FlexRena84",
+    "bin": "Flexible Renamer.exe",
+    "shortcuts": [
+        [
+            "Flexible Renamer.exe",
+            "Flexible Renamer"
+        ]
+    ],
+    "pre_install": [
+        "$path = \"$persist_dir\"; if (!(Test-Path $path)) { New-Item $path -ItemType Directory | Out-Null }",
+        "$path = \"$persist_dir\\Flexible Renamer.ini\"; if (!(Test-Path $path)) { New-Item $path -ItemType File | Out-Null }"
+    ],
+    "persist": "Flexible Renamer.ini",
+    "checkver": {
+        "url": "https://forest.watch.impress.co.jp/library/software/flexrenamer/",
+        "regex": "<dd>v(.+)（.+</dd>"
+    },
+    "autoupdate": {
+        "url": "https://dforest.watch.impress.co.jp/library/f/flexrenamer/10463/FlexRena${cleanVersion}.zip"
+    }
+}

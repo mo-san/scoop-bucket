@@ -1,0 +1,25 @@
+{
+    "version": "1.19.8",
+    "description": "Mendeley Desktop",
+    "homepage": "https://www.mendeley.com/",
+    "license": "Proprietary",
+    "url": "https://desktop-download.mendeley.com/download/Mendeley-Desktop-1.19.8-win32.exe#/dl.7z",
+    "hash": "99b308cda0047bdaae8727ebd92b7ce6c8342fe794732b61313db5444cf69f4f",
+    "bin": "MendeleyDesktop.exe",
+    "shortcuts": [
+        [
+            "MendeleyDesktop.exe",
+            "Mendeley Desktop"
+        ]
+    ],
+    "checkver": {
+        "url": "https://www.mendeley.com/release-notes",
+        "regex": "Desktop v([\\d.]+)</a>"
+    },
+    "autoupdate": {
+        "url": "https://desktop-download.mendeley.com/download/Mendeley-Desktop-${version}-win32.exe#/dl.7z"
+    },
+    "post_install": [
+        "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninstall*\" -Force -Recurse"
+    ]
+}

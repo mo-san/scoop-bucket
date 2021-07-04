@@ -1,0 +1,30 @@
+{
+    "version": "3.40",
+    "description": "VB6 runtime",
+    "homepage": "https://www.vector.co.jp/soft/dl/win95/util/se342080.html",
+    "license": "",
+    "depends": "sudo",
+    "url": "https://ftp.vector.co.jp/49/41/2181/vb6rt340.exe#/dl.7z",
+    "hash": "6dc97365c2545ace7f18428592307d4d13d8c1c7ca0289725cb9b6603e47a875",
+    "installer": {
+        "script": [
+            "& \"$(appdir 7zip)\\current\\7z.exe\" e \"$dir\\vb6rtest\\Vb6rtest.CAB\" -o\"$dir\\\" | Out-Null",
+            "Remove-Item  \"$dir\\vb6rtest\", \"$dir\\*.exe\" -Force -Recurse",
+            "Write-Host \"Registering ocx libraries...\"",
+            "gci \"$dir\" | ? { $_.Name -like \"*.ocx\" } | % { sudo \"$env:COMSPEC\" /c regsvr32.exe /s $_.FullName }"
+        ]
+    },
+    "uninstaller": {
+        "script": [
+            "Write-Host \"Unregistering ocx libraries...\"",
+            "gci \"$dir\" | ? { $_.Name -like \"*.ocx\" } | % { sudo \"$env:COMSPEC\" /c regsvr32.exe /u /s $_.FullName }"
+        ]
+    },
+    "checkver": {
+        "url": "https://www.vector.co.jp/soft/dl/win95/util/se342080.html",
+        "regex": "<span class=\"version\">(.+)</span>"
+    },
+    "autoupdate": {
+        "url": "https://ftp.vector.co.jp/49/41/2181/vb6rt${cleanVersion}.exe#/dl.7z"
+    }
+}

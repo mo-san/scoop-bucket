@@ -1,0 +1,28 @@
+{
+    "version": "1.3",
+    "description": "Podesk",
+    "homepage": "https://forest.watch.impress.co.jp/library/software/podesk/",
+    "license": "",
+    "depends": "innounp",
+    "url": "https://dforest.watch.impress.co.jp/library/p/podesk/12042/Podesk1.3.zip#/dl.zip",
+    "hash": "bf8ef3b424f86836e6825a22056e3a40005d5038c7a6b80fcf7e05d35b007778",
+    "bin": "Podesk.exe",
+    "shortcuts": [
+        [
+            "Podesk.exe",
+            "Podesk"
+        ]
+    ],
+    "pre_install": [
+        "Move-Item \"$dir\\Podesk\\PodeskSetup.exe\" \"$dir\\setup.exe\"",
+        "& \"$(appdir innounp)\\current\\innounp.exe\" -q -e \"$dir\\setup.exe\" -d\"$dir\" | Out-Null",
+        "Remove-Item  \"$dir\\setup.exe\", \"$dir\\install_script.iss\", \"$dir\\Podesk\" -Force -Recurse"
+    ],
+    "checkver": {
+        "url": "https://forest.watch.impress.co.jp/library/software/podesk/",
+        "regex": "<dd>v([\\d.]+).*</dd>"
+    },
+    "autoupdate": {
+        "url": "https://dforest.watch.impress.co.jp/library/p/podesk/12042/Podesk${version}.zip#/dl.zip"
+    }
+}
