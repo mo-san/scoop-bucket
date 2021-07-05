@@ -1,6 +1,6 @@
 {
     "version": "0.16a",
-    "description": "PiCo",
+    "description": "PiCo: detects similar or duplicate pictures",
     "homepage": "http://xration.sakura.ne.jp/",
     "license": "Proprietary",
     "depends": "",

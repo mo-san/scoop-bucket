@@ -1,6 +1,6 @@
 {
     "version": "1.3",
-    "description": "Podesk",
+    "description": "Podesk: a virtual desktop switcher with only mouse moves",
     "homepage": "https://forest.watch.impress.co.jp/library/software/podesk/",
     "license": "",
     "depends": "innounp",

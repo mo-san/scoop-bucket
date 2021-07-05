@@ -1,6 +1,6 @@
 {
     "version": "4.02",
-    "description": "CLaunch",
+    "description": "CLaunch: a skin-customizable button-based program launcher",
     "homepage": "https://hp.vector.co.jp/authors/VA018351/claunch.html",
     "license": "Freeware",
     "architecture": {

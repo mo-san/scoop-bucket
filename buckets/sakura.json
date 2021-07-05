@@ -1,6 +1,6 @@
 {
     "version": "2.4.1",
-    "description": "Sakura Editor: サクラエディタ",
+    "description": "Sakura Editor: a text editor (original name is 'サクラエディタ')",
     "homepage": "https://sakura-editor.github.io/",
     "license": "Zlib",
     "url": "https://github.com/sakura-editor/sakura/releases/download/v2.4.1/sakura-tag-v2.4.1-build2849-ee8234f-Win32-Release-Exe.zip",
