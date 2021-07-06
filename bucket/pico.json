@@ -14,7 +14,7 @@
         ]
     ],
     "pre_install": [
-        "ensure \"$persist_dir\"",
+        "ensure \"$persist_dir\" | Out-Null",
         "$path = \"$persist_dir\\settings.ini\"; if (!(Test-Path $path)) { New-Item $path | Out-Null }",
 
         "if (!(Test-Path \"$persist_dir\\ifjpeg.spi\")) {",

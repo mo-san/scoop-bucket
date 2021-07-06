@@ -27,7 +27,7 @@
         }
     },
     "pre_install": [
-        "ensure \"$persist_dir\"",
+        "ensure \"$persist_dir\" | Out-Null",
         "$path = \"$persist_dir\\SuperTagEditor(x64).ini\"; if (!(Test-Path $path)) { New-Item $path | Out-Null }",
         "$path = \"$persist_dir\\SuperTagEditor(x86).ini\"; if (!(Test-Path $path)) { New-Item $path | Out-Null }"
     ],
