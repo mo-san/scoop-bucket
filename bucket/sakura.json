@@ -2,7 +2,10 @@
     "version": "2.4.1",
     "description": "Sakura Editor: a text editor (original name is 'サクラエディタ')",
     "homepage": "https://sakura-editor.github.io/",
-    "license": "Zlib",
+    "license": {
+        "identifier": "Zlib",
+        "url": "https://github.com/sakura-editor/sakura/blob/master/LICENSE"
+    },
     "url": "https://github.com/sakura-editor/sakura/releases/download/v2.4.1/sakura-tag-v2.4.1-build2849-ee8234f-Win32-Release-Exe.zip",
     "hash": "4a906b211af88de6112e0cd636e867a2699202e36731140d9520b91b6649b319",
     "bin": "sakura.exe",
@@ -14,11 +17,13 @@
     ],
     "pre_install": [
         "$path = \"$persist_dir\"; if (!(Test-Path $path)) { New-Item $path -ItemType Directory | Out-Null }",
-        "$path = \"$persist_dir\\sakura.ini\"; if (!(Test-Path $path)) { New-Item $path -ItemType File | Out-Null }"
+        "$path = \"$persist_dir\\sakura.exe.ini\"; if (!(Test-Path $path)) { Set-Content $path -Value \"[Settings]`nMultiUser=1`nUserRootFolder=0`nUserSubFolder=sakura\" }"
     ],
     "persist": [
-        "sakura.ini",
-        "keyword",
+        "sakura.exe.ini",
+        "Keywords",
+        "Macros",
+        "Migemo",
         "Plugins"
     ],
     "checkver": {
@@ -30,5 +35,6 @@
         "hash": {
             "url": "https://github.com/sakura-editor/sakura/releases/download/v${version}/${matchFilename}.md5"
         }
-    }
+    },
+    "notes": "The configuration file (sakura.ini) will be installed in user specific application data folder (i.e. %APPDATA%\\sakura)"
 }
