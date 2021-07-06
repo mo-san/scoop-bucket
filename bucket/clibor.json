@@ -13,6 +13,10 @@
             "Clibor"
         ]
     ],
+    "persist": [
+        "ch",
+        "ct"
+    ],
     "checkver": {
         "url": "https://forest.watch.impress.co.jp/library/software/clibor/",
         "regex": "<dd>v([\\d.]+).+</dd>"

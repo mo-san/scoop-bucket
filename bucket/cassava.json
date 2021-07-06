@@ -2,7 +2,10 @@
     "version": "2.3.0",
     "description": "Cassava Editor: CSV Editor",
     "homepage": "https://www.asukaze.net/soft/cassava/",
-    "license": "Freeware",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://www.asukaze.net/soft/cassava/help/contact.html"
+    },
     "architecture": {
         "64bit": {
             "url": "https://www.asukaze.net/soft/cassava/arc/Cassava2_3_0_64.zip",
