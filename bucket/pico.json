@@ -3,7 +3,7 @@
     "description": "PiCo: detects similar or duplicate pictures",
     "homepage": "http://xration.sakura.ne.jp/",
     "license": "Proprietary",
-    "depends": "",
+    "depends": "7zip",
     "url": "http://xration.sakura.ne.jp/images/program/PICO016a.lzh",
     "hash": "ea845e783ff77ff919103a4128c4834fb21fe904d291c28b9b39afe13282c120",
     "bin": "pico.exe",
@@ -14,11 +14,11 @@
         ]
     ],
     "pre_install": [
-        "$path = \"$persist_dir\"; if (!(Test-Path $path)) { New-Item $path -ItemType Directory | Out-Null }",
-        "$path = \"$persist_dir\\settings.ini\"; if (!(Test-Path $path)) { New-Item $path -ItemType File | Out-Null }",
+        "ensure \"$persist_dir\"",
+        "$path = \"$persist_dir\\settings.ini\"; if (!(Test-Path $path)) { New-Item $path | Out-Null }",
 
-        "if (!(Test-Path \"persist_dir\\ifjpeg.spi\")) {",
-        "  iwr https://www.digitalpad.co.jp/~takechin/archives/ifjpeg034.zip -OutFile \"$persist_dir\\dl.zip\"",
+        "if (!(Test-Path \"$persist_dir\\ifjpeg.spi\")) {",
+        "  Invoke-WebRequest https://www.digitalpad.co.jp/~takechin/archives/ifjpeg034.zip -OutFile \"$persist_dir\\dl.zip\"",
         "  & \"$(appdir 7zip)\\current\\7z.exe\" e \"$persist_dir\\dl.zip\" -o\"$persist_dir\\\" | Out-Null",
         "  Remove-Item \"$persist_dir\\dl.zip\"",
         "}"

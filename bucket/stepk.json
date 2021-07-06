@@ -27,9 +27,9 @@
         }
     },
     "pre_install": [
-        "$path = \"$persist_dir\"; if (!(Test-Path $path)) { New-Item $path -ItemType Directory | Out-Null }",
-        "$path = \"$persist_dir\\SuperTagEditor(x64).ini\"; if (!(Test-Path $path)) { New-Item $path -ItemType File | Out-Null }",
-        "$path = \"$persist_dir\\SuperTagEditor(x86).ini\"; if (!(Test-Path $path)) { New-Item $path -ItemType File | Out-Null }"
+        "ensure \"$persist_dir\"",
+        "$path = \"$persist_dir\\SuperTagEditor(x64).ini\"; if (!(Test-Path $path)) { New-Item $path | Out-Null }",
+        "$path = \"$persist_dir\\SuperTagEditor(x86).ini\"; if (!(Test-Path $path)) { New-Item $path | Out-Null }"
     ],
     "persist": [
         ["x64\\SuperTagEditor.ini", "SuperTagEditor(x64).ini"],

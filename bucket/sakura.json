@@ -16,7 +16,7 @@
         ]
     ],
     "pre_install": [
-        "$path = \"$persist_dir\"; if (!(Test-Path $path)) { New-Item $path -ItemType Directory | Out-Null }",
+        "ensure \"$persist_dir\"",
         "$path = \"$persist_dir\\sakura.exe.ini\"; if (!(Test-Path $path)) { Set-Content $path -Value \"[Settings]`nMultiUser=1`nUserRootFolder=0`nUserSubFolder=sakura\" }"
     ],
     "persist": [

@@ -14,8 +14,8 @@
         ]
     ],
     "pre_install": [
-        "$path = \"$persist_dir\"; if (!(Test-Path $path)) { New-Item $path -ItemType Directory | Out-Null }",
-        "$path = \"$persist_dir\\Flexible Renamer.ini\"; if (!(Test-Path $path)) { New-Item $path -ItemType File | Out-Null }"
+        "ensure \"$persist_dir\"",
+        "$path = \"$persist_dir\\Flexible Renamer.ini\"; if (!(Test-Path $path)) { New-Item $path | Out-Null }"
     ],
     "persist": "Flexible Renamer.ini",
     "checkver": {
