@@ -8,7 +8,7 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://www.vieas.com/software/dl/dl.php?id=VieasEx&ver=2560_64&ext=zip",
+            "url": "https://www.vieas.com/software/dl/dl.php?id=VieasEx&ver=2560_64&ext=zip#/dl.zip",
             "hash": "bdfbdfe8ede74e232d1a6249228e72f62b3eaee0c2792594e789895b789bc811"
         },
         "32bit": {
@@ -31,10 +31,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://www.vieas.com/software/dl/dl.php?id=VieasEx&ver=${cleanVersion}_64&ext=zip"
+                "url": "https://www.vieas.com/software/dl/dl.php?id=VieasEx&ver=${cleanVersion}_64&ext=zip#/dl.zip"
             },
             "32bit": {
-                "url": "https://www.vieas.com/software/dl/dl.php?id=VieasEx&ver=${cleanVersion}_32&ext=zip"
+                "url": "https://www.vieas.com/software/dl/dl.php?id=VieasEx&ver=${cleanVersion}_32&ext=zip#/dl.zip"
             }
         }
     }
