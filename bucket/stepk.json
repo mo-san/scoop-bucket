@@ -1,10 +1,10 @@
 {
-    "version": "1.03e",
+    "version": "1.05a",
     "description": "STEP_K: a mp3 tag editor with spreadsheet-like operations",
     "homepage": "https://kobarin.sakura.ne.jp/",
     "license": "GPL-2.0-only",
-    "url": "https://dforest.watch.impress.co.jp/library/s/step_k/11685/STEP_K_103e.exe#/dl.7z",
-    "hash": "b2736ac9cb85c0bc89c5d3579564c123f82c47a856e362c68ba76afb4fcf4148",
+    "url": "https://dforest.watch.impress.co.jp/library/s/step_k/11685/STEP_K_105a.exe",
+    "hash": "408d4e52f8b24c4afcc886cce0ee9740324f87e63da9e18be27df11feb4d19d1",
     "extract_dir": "STEP_K_103e",
     "architecture": {
         "64bit": {
@@ -32,8 +32,14 @@
         "$path = \"$persist_dir\\SuperTagEditor(x86).ini\"; if (!(Test-Path $path)) { New-Item $path | Out-Null }"
     ],
     "persist": [
-        ["x64\\SuperTagEditor.ini", "SuperTagEditor(x64).ini"],
-        ["x86\\SuperTagEditor.ini", "SuperTagEditor(x86).ini"]
+        [
+            "x64\\SuperTagEditor.ini",
+            "SuperTagEditor(x64).ini"
+        ],
+        [
+            "x86\\SuperTagEditor.ini",
+            "SuperTagEditor(x86).ini"
+        ]
     ],
     "checkver": {
         "url": "https://forest.watch.impress.co.jp/library/software/step_k/",
