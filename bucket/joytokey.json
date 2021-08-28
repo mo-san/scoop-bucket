@@ -1,10 +1,10 @@
 {
-    "version": "6.6",
+    "version": "6.7",
     "description": "JoyToKey: converts input from joysticks to virtual output of a keyboard or a mouse",
     "homepage": "https://joytokey.net/ja/",
     "license": "Shareware",
     "url": "https://joytokey.net/download/JoyToKey.zip",
-    "hash": "a1941de88a5aa5bbe81b47f01f1a023f61285ffbbea0af5c8ab666104460d73c",
+    "hash": "0128b79451bec1b48cbe5fd5a3e25c84dbb512790e620817c444c3d72917027e",
     "bin": "JoyToKey.exe",
     "shortcuts": [
         [
