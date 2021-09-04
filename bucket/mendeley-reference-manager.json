@@ -1,10 +1,10 @@
 {
-    "version": "2.55.0",
+    "version": "2.56.1",
     "description": "Mendeley Reference Manager",
     "homepage": "https://www.mendeley.com/",
     "license": "Proprietary",
-    "url": "https://static.mendeley.com/bin/desktop/mendeley-reference-manager-2.55.0.exe#/dl.7z",
-    "hash": "b706154445767d12a0cbe2754b6a42ef60c1b2fae5e26f12ef234576cd8754d5",
+    "url": "https://static.mendeley.com/bin/desktop/mendeley-reference-manager-2.56.1.exe#/dl.7z",
+    "hash": "b8f3aee9d8c6a3df49360033b2785f46f544a5a1ff077ed1b222d0fe019c3ac5",
     "pre_install": [
         "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
         "Remove-Item \"$dir\\`$*\", \"$dir\\Uninst*\" -Force -Recurse"
