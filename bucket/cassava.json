@@ -1,5 +1,5 @@
 {
-    "version": "2.3.1",
+    "version": "2.3.2",
     "description": "Cassava Editor: CSV Editor",
     "homepage": "https://www.asukaze.net/soft/cassava/",
     "license": {
@@ -8,12 +8,12 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://www.asukaze.net/soft/cassava/arc/Cassava2_3_1_64.zip",
-            "hash": "4ab061d1d77b2873c4de495a75ba726813424ca4e8d5d339448c5a4384bf5979"
+            "url": "https://www.asukaze.net/soft/cassava/arc/Cassava2_3_2_64.zip",
+            "hash": "aa42231396c085b2bc7ae9483da58dfb4bb2b3d52eb62e39e0e0d6a3ac16b748"
         },
         "32bit": {
-            "url": "https://www.asukaze.net/soft/cassava/arc/Cassava2_3_1.zip",
-            "hash": "799ce6a49b5ddf33fa7e5b4b181b3050332e440d463044d3f61a588013030f88"
+            "url": "https://www.asukaze.net/soft/cassava/arc/Cassava2_3_2.zip",
+            "hash": "25c63821704b09ba1fd94afc9675d2cb5a1e1478db49bee6d09c3e64709bd7b4"
         }
     },
     "extract_dir": "Cassava",
