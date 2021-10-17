@@ -1,10 +1,10 @@
 {
-    "version": "1.1.0.19",
+    "version": "1.1.0.20",
     "description": "Command line interface for Everything",
     "homepage": "https://www.voidtools.com/support/everything/command_line_interface/",
     "license": "",
-    "url": "https://www.voidtools.com/ES-1.1.0.19.zip",
-    "hash": "5a70e0056070adebd6ca422f9fb28079e652eace8c793e12cb823c09a9e1875e",
+    "url": "https://www.voidtools.com/ES-1.1.0.20.zip",
+    "hash": "c5b7525a21587f9b778dea7a8898beba23e9072c3d4469b09036431463630196",
     "bin": "es.exe",
     "checkver": {
         "url": "https://www.voidtools.com/downloads/",
