@@ -1,11 +1,11 @@
 {
-    "version": "1.3",
+    "version": "2",
     "description": "Podesk: a virtual desktop switcher with only mouse moves",
     "homepage": "https://forest.watch.impress.co.jp/library/software/podesk/",
     "license": "",
     "depends": "innounp",
-    "url": "https://dforest.watch.impress.co.jp/library/p/podesk/12042/Podesk1.3.zip#/dl.zip",
-    "hash": "bf8ef3b424f86836e6825a22056e3a40005d5038c7a6b80fcf7e05d35b007778",
+    "url": "https://dforest.watch.impress.co.jp/library/p/podesk/12042/Podesk2.zip#/dl.zip",
+    "hash": "3aa2c2f4338c487f32bb9b41d4a2332d5796bed2c7a9ac672f99dfd8b9810001",
     "bin": "Podesk.exe",
     "shortcuts": [
         [
