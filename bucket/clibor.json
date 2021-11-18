@@ -1,10 +1,10 @@
 {
-    "version": "2.1.2",
+    "version": "2.2.2",
     "description": "Clibor: Clipboard manager",
     "homepage": "https://chigusa-web.com/clibor/",
     "license": "Freeware",
     "url": "https://dforest.watch.impress.co.jp/library/c/clibor/10713/clibor.zip",
-    "hash": "7c904488a12f03e71b153aacaf3ae355cc5d19199799466370af2b8a5add17ce",
+    "hash": "d5bbeda5022c9537c217c691cbc03c798847700eed28ae0f75385f9f950986b9",
     "extract_dir": "clibor",
     "bin": "Clibor.exe",
     "shortcuts": [
