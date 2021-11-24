@@ -1,16 +1,16 @@
 {
-    "version": "4.02",
+    "version": "4.03",
     "description": "CLaunch: a skin-customizable button-based program launcher",
     "homepage": "https://hp.vector.co.jp/authors/VA018351/claunch.html",
     "license": "Freeware",
     "architecture": {
         "64bit": {
-            "url": "https://ss1.xrea.com/pyonkichi.g1.xrea.com/archives/cl64_402.exe#/dl.7z",
-            "hash": "5519a749542dfcecb8800e2bceb4b7f42535cf76068f01d2cfde02a6fb80b177"
+            "url": "https://ss1.xrea.com/pyonkichi.g1.xrea.com/archives/cl64_403.exe#/dl.7z",
+            "hash": "fc47e9d452db07f73f474e75c0c0ca58e930655491a4c92958b7b07360768f01"
         },
         "32bit": {
-            "url": "https://ss1.xrea.com/pyonkichi.g1.xrea.com/archives/cl402.exe#/dl.7z",
-            "hash": "c889f37ae37bfb73d69df0bb8920fad0e82f029a790b0ec37ae637b922e89fcb"
+            "url": "https://ss1.xrea.com/pyonkichi.g1.xrea.com/archives/cl403.exe#/dl.7z",
+            "hash": "69c0ba64ea02a2a33c04147df6ac1abdf0edf9a5f3e5da0e6c6391fd032530e5"
         }
     },
     "extract_dir": "",
@@ -21,9 +21,7 @@
             "CLaunch"
         ]
     ],
-    "post_install": [
-        "Remove-Item \"$dir\\Setup.exe\""
-    ],
+    "post_install": "Remove-Item \"$dir\\Setup.exe\"",
     "persist": [
         "Data",
         "Plugins"
