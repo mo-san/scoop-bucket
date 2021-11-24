@@ -1,7 +1,7 @@
 {
     "version": "0.16a",
     "description": "PiCo: detects similar or duplicate pictures",
-    "homepage": "http://xration.sakura.ne.jp/",
+    "homepage": "http://xration.sakura.ne.jp/htmls/program.htm",
     "license": "Proprietary",
     "depends": "7zip",
     "url": "http://xration.sakura.ne.jp/images/program/PICO016a.lzh",
