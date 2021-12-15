@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  main:
+    image: r15ch13/excavator:latest
+    deploy:
+      mode: global
+    command: bash -x /run.sh
+    volumes:
+      - ./.ssh:/root/.ssh
+      - ./logs:/root/log
+      - ./run.sh:/run.sh
+    environment:
+      GIT_USERNAME: "Taniguchi Masaki"
+      GIT_EMAIL: "window100@gmail.com"
+      BUCKET: "mo-san/scoop-bucket"
