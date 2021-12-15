@@ -8,7 +8,6 @@ services:
     command: bash -x /run.sh
     volumes:
       - ./.ssh:/root/.ssh
-      - ./logs:/root/log
       - ./run.sh:/run.sh
     environment:
       GIT_USERNAME: "Taniguchi Masaki"
