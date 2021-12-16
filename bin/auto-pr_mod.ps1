@@ -54,6 +54,7 @@ param(
     [Switch] $SkipUpdated
 )
 
+$PSScriptRoot = "$env:SCOOP_HOME/bin"
 . "$PSScriptRoot\..\lib\manifest.ps1"
 . "$PSScriptRoot\..\lib\json.ps1"
 . "$PSScriptRoot\..\lib\unix.ps1"
