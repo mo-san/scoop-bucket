@@ -2,7 +2,7 @@
 .SYNOPSIS
     Updates manifests and pushes them or creates pull-requests.
 .DESCRIPTION
-    Updates manifests and pushes them directly to the master branch or creates pull-requests for upstream.
+    Updates manifests and pushes them directly to the default branch or creates pull-requests for upstream.
 .PARAMETER Upstream
     Upstream repository with the target branch.
     Must be in format '<user>/<repo>:<branch>'
@@ -12,9 +12,9 @@
 .PARAMETER Dir
     The directory where to search for manifests.
 .PARAMETER Push
-    Push updates directly to 'origin master'.
+    Push updates directly to 'origin master_or_main'.
 .PARAMETER Request
-    Create pull-requests on 'upstream master' for each update.
+    Create pull-requests on 'upstream master_or_main' for each update.
 .PARAMETER Help
     Print help to console.
 .PARAMETER SpecialSnowflakes
@@ -65,8 +65,8 @@ if ((!$Push -and !$Request) -or $Help) {
 Usage: auto-pr.ps1 [OPTION]
 
 Mandatory options:
-  -p,  -push                       push updates directly to 'origin master'
-  -r,  -request                    create pull-requests on 'upstream master' for each update
+  -p,  -push                       push updates directly to 'origin master_or_main'
+  -r,  -request                    create pull-requests on 'upstream master_or_main' for each update
 
 Optional options:
   -u,  -upstream                   upstream repository with target branch
@@ -103,8 +103,9 @@ function pull_requests($json, [String] $app, [String] $upstream, [String] $manif
     $version = $json.version
     $homepage = $json.homepage
     $branch = "manifest/$app-$version"
+    $default_branch = $Upstream.Split(":")[1]
 
-    execute 'hub checkout master'
+    execute "hub checkout $default_branch"
     Write-Host "hub rev-parse --verify $branch" -ForegroundColor Green
     hub rev-parse --verify $branch
 
@@ -148,13 +149,15 @@ a new version of [$app]($homepage) is available.
     }
 }
 
+$default_branch = $Upstream.Split(":")[1]
+
 Write-Host 'Updating ...' -ForegroundColor DarkCyan
 if ($Push) {
-    execute 'hub pull origin master'
-    execute 'hub checkout master'
+    execute "hub pull origin $default_branch"
+    execute "hub checkout $default_branch"
 } else {
-    execute 'hub pull upstream master'
-    execute 'hub push origin master'
+    execute "hub pull upstream $default_branch"
+    execute "hub push origin $default_branch"
 }
 
 . "$PSScriptRoot\checkver.ps1" -App $App -Dir $Dir -Update -SkipUpdated:$SkipUpdated
@@ -198,10 +201,10 @@ hub diff --name-only | ForEach-Object {
 
 if ($Push) {
     Write-Host 'Pushing updates ...' -ForegroundColor DarkCyan
-    execute 'hub push origin master'
+    execute "hub push origin $default_branch"
 } else {
-    Write-Host 'Returning to master branch and removing unstaged files ...' -ForegroundColor DarkCyan
-    execute 'hub checkout -f master'
+    Write-Host 'Returning to default branch and removing unstaged files ...' -ForegroundColor DarkCyan
+    execute "hub checkout -f $default_branch"
 }
 
 execute 'hub reset --hard'
