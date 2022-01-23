@@ -16,7 +16,9 @@
     "pre_install": [
         "ensure \"$persist_dir\" | Out-Null",
         "$target = \"$persist_dir\\Clibor.xml\"",
-        "if (Test-Path $target) { New-Item -ItemType HardLink -Path \"$dir\" -Name Clibor.xml -Value $target | Out-Null }"
+        "if (Test-Path $target) {",
+        "    New-Item -ItemType HardLink -Path \"$dir\" -Name Clibor.xml -Value $target | Out-Null",
+        "}"
     ],
     "persist": [
         "ch",
@@ -35,5 +37,5 @@
     "autoupdate": {
         "url": "https://dforest.watch.impress.co.jp/library/c/clibor/10713/clibor.zip"
     },
-    "notes": "To backup your config file (CLibor.xml), run 'persist_config.ps1' AFTER first run of clibor."
+    "notes": "To backup your config file (Clibor.xml), run 'scoop\\apps\\clibor\\current\\persist_config.ps1' AFTER first run of clibor."
 }
