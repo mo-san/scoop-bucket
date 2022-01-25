@@ -8,6 +8,7 @@ This repository includes:
 |--|--|--|--|
 | cassava | Cassava Editor | CSV Editor | https://www.asukaze.net/soft/cassava/ |
 | claunch | CLaunch | a skin-customizable button-based program launcher | https://hp.vector.co.jp/authors/VA018351/claunch.html |
+| change-key | Change Key | Substitutes keyboard keys | http://satoshi3.sakura.ne.jp/f_soft/dw_win.htm |
 | clibor | Clibor | Clipboard manager | https://chigusa-web.com/clibor/ |
 | cspoit | CSpoit a.k.a. 'パワースポイト' | Color picker | https://soft.utopiat.net/cspoit/ |
 | default-programs-editor | Default Programs Editor | File associations fixer | https://defaultprogramseditor.com/ |
