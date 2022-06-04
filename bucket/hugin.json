@@ -1,10 +1,10 @@
 {
-    "version": "2020.0.0",
+    "version": "2021.0.0",
     "description": "Hugin: panorama stitcher",
     "homepage": "http://hugin.sourceforge.net/",
     "license": "GPL-2.0-only",
-    "url": "https://downloads.sourceforge.net/project/hugin/hugin/hugin-2020.0/Hugin-2020.0.0-win64.msi",
-    "hash": "sha1:41bbced68dcbba7b8bbc09794172f7db3a58a106",
+    "url": "https://downloads.sourceforge.net/project/hugin/hugin/hugin-2021.0/Hugin-2021.0.0-win64.msi",
+    "hash": "sha1:3ef54f3cd7c0f81610bbd986cd1b25e2b09246d9",
     "extract_dir": "Hugin",
     "bin": "bin\\hugin.exe",
     "shortcuts": [
