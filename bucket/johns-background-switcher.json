@@ -1,10 +1,10 @@
 {
-    "version": "5.4",
+    "version": "5.4.0.1",
     "description": "John’s Background Switcher",
     "homepage": "https://johnsad.ventures/software/backgroundswitcher/windows/",
     "license": "Proprietary",
-    "url": "https://dl.johnsadventures.com/SwitcherSetup54.exe#/dl.7z",
-    "hash": "407670b657a7da9c04711b2d8893faca2dcdb66a82415ef6a75af632b5800a23",
+    "url": "https://dl.johnsadventures.com/JBS-5.4.0.1.zip",
+    "hash": "47fd682debb104422318f3cd73e8c0b5a48a133a7106b1d463bc11a4fbe85ebb",
     "bin": "BackgroundSwitcher.exe",
     "shortcuts": [
         [
@@ -12,12 +12,11 @@
             "BackgroundSwitcher"
         ]
     ],
-    "post_install": "Remove-Item \"$dir\\uninst.exe\",\"$dir\\`$PLUGINSDIR\" -Force -Recurse",
     "checkver": {
         "url": "https://johnsad.ventures/software/backgroundswitcher/windows/",
-        "regex": "<td>\\(Version ([\\d.]+)"
+        "regex": "<a href=\"(?<url>[^\"]+-([0-9.]+)\\.zip)\">zip archive</a>"
     },
     "autoupdate": {
-        "url": "https://dl.johnsadventures.com/SwitcherSetup${cleanVersion}.exe#/dl.7z"
+        "url": "${matchUrl}"
     }
 }
