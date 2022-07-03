@@ -5,9 +5,9 @@
         "identifier": "Freeware",
         "url": "https://docs.microsoft.com/en-us/sysinternals/license-terms"
     },
-    "version": "3.10",
+    "version": "3.14",
     "url": "https://download.sysinternals.com/files/WinObj.zip",
-    "hash": "26d08770eabcd7fb8817c66ff73c38446d3fbee3cdd5cdc7c38dffaab81af311",
+    "hash": "585c75e0c2fb82fc43d8b986deac305fa3711db8d5f369dd874b66e721e6f5b3",
     "checkver": {
         "url": "https://docs.microsoft.com/en-us/sysinternals/downloads/winobj",
         "re": "WinObj\\s(?:v|V)?([\\d.]+)"
