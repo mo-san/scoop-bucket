@@ -5,9 +5,9 @@
         "identifier": "Freeware",
         "url": "https://docs.microsoft.com/en-us/sysinternals/license-terms"
     },
-    "version": "2.01",
+    "version": "2.02",
     "url": "https://download.sysinternals.com/files/Disk2vhd.zip",
-    "hash": "dd04b6e7d467b78c994fbb1929a9e7438c2e900ced4fcff245227c8fe9a237bd",
+    "hash": "c294d279bf98645f84452989f320b561bf58609e35d85de47ea19ef583880821",
     "checkver": {
         "url": "https://docs.microsoft.com/en-us/sysinternals/downloads/disk2vhd",
         "re": "Disk2vhd\\s(?:v|V)?([\\d.]+)"
