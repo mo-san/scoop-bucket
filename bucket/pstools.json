@@ -5,9 +5,9 @@
         "identifier": "Freeware",
         "url": "https://docs.microsoft.com/en-us/sysinternals/license-terms"
     },
-    "version": "March.23.2021",
+    "version": "October.12.2021",
     "url": "https://download.sysinternals.com/files/PSTools.zip",
-    "hash": "0d6ba2f1f2bf290b71bde12f095a6c9697aac7794bc2523f86b383b82f73a430",
+    "hash": "102576f2df817427fee2804380ef8904afb7b46d73d56d1a60e7721d668b6555",
     "checkver": {
         "url": "https://docs.microsoft.com/en-us/sysinternals/downloads/pstools",
         "re": "ublished:\\s*(\\w+)\\s+(\\d+),\\s+(\\d+)\\b",
