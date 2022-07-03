@@ -5,9 +5,9 @@
         "identifier": "Freeware",
         "url": "https://docs.microsoft.com/en-us/sysinternals/license-terms"
     },
-    "version": "1.6",
+    "version": "1.61",
     "url": "https://download.sysinternals.com/files/ShareEnum.zip",
-    "hash": "54242bb3ce5f62c6847aa88ac3079ca58a1d508858ae16265e8e45a7b4ed1d38",
+    "hash": "7f88cabcf12a502e8242d5d1d899ee6d1ddec6642e56cbd6511a698827cbfcba",
     "checkver": {
         "url": "https://docs.microsoft.com/en-us/sysinternals/downloads/shareenum",
         "re": "ShareEnum\\s(?:v|V)?([\\d.]+)"
