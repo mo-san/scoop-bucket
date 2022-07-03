@@ -5,9 +5,9 @@
         "identifier": "Freeware",
         "url": "https://docs.microsoft.com/en-us/sysinternals/license-terms"
     },
-    "version": "1.32",
+    "version": "1.33",
     "url": "https://download.sysinternals.com/files/AccessEnum.zip",
-    "hash": "838fa61e2d6714f6b0667b70b7874836911adbf7bd9cccdd4221704ba0de73ea",
+    "hash": "a20e1e76bf9886118675fdc1902a0d90ef7d8dee68d0da6d1c13b20be2de6d72",
     "checkver": {
         "url": "https://docs.microsoft.com/en-us/sysinternals/downloads/accessenum",
         "re": "AccessEnum\\s(?:v|V)?([\\d.]+)"
