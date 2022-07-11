@@ -13,6 +13,7 @@ This repository includes:
 | cspoit | CSpoit a.k.a. 'パワースポイト' | Color picker | https://soft.utopiat.net/cspoit/ |
 | default-programs-editor | Default Programs Editor | File associations fixer | https://defaultprogramseditor.com/ |
 | everything-cli | everything-cli | Command line interface for Everything | https://www.voidtools.com/support/everything/command_line_interface/ |
+| firefox-jp | Firefox | Popular open source web browser with Japanese localization (Firefox 日本語版) | https://www.mozilla.org/firefox/ |
 | flexible-renamer | Flexible Renamer |  | https://hp.vector.co.jp/authors/VA014830/FlexRena/ |
 | gekiore-regedit | GekiOreRegEdit a.k.a. '激動たる俺RegEdit改' | a registry editor | https://www.vector.co.jp/soft/win95/util/se295314.html |
 | hugin | Hugin | panorama stitcher | http://hugin.sourceforge.net/ |
