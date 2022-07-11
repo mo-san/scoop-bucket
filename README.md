@@ -7,8 +7,8 @@ This repository includes:
 | Package Name | App Name | Description | Website |
 |--|--|--|--|
 | cassava | Cassava Editor | CSV Editor | https://www.asukaze.net/soft/cassava/ |
-| claunch | CLaunch | a skin-customizable button-based program launcher | https://hp.vector.co.jp/authors/VA018351/claunch.html |
 | change-key | Change Key | Substitutes keyboard keys | http://satoshi3.sakura.ne.jp/f_soft/dw_win.htm |
+| claunch | CLaunch | a skin-customizable button-based program launcher | https://hp.vector.co.jp/authors/VA018351/claunch.html |
 | clibor | Clibor | Clipboard manager | https://chigusa-web.com/clibor/ |
 | cspoit | CSpoit a.k.a. 'パワースポイト' | Color picker | https://soft.utopiat.net/cspoit/ |
 | default-programs-editor | Default Programs Editor | File associations fixer | https://defaultprogramseditor.com/ |
@@ -20,6 +20,7 @@ This repository includes:
 | joytokey | JoyToKey | converts input from joysticks to virtual output of a keyboard or a mouse | https://joytokey.net/ja/ |
 | leeyes | Leeyes | image (comic) viewer<br>見開き画像ビューア | http://www3.tokai.or.jp/boxes/leeyes/ |
 | mousegesturel-ahk | MouseGestureL.ahk | a mouse gesture utility made of Autohotkey scripts | https://hp.vector.co.jp/authors/VA018351/mglahk.html |
+| mp4tools | MP4Tools | MP4Joiner and MP4Splitter, a collection of cross-platform free tools to manipulate MP4 files | https://www.mp4joiner.org/ |
 | nomeiryoui | 'No!! Meiryo UI' a.k.a. 'Meiryo UIも大っきらい!!' | a utility to configure fonts in a menubar or dialogs | http://tatsu.life.coocan.jp/MySoft/WinCust/index.html |
 | pico | PiCo | detects similar or duplicate pictures<br>類似画像検索 | http://xration.sakura.ne.jp/htmls/program.htm |
 | pixfront | pixFront | a picture deskew tool | http://pixtopo.main.jp/front_en/index.html |
