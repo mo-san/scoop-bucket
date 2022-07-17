@@ -17,7 +17,22 @@
     ],
     "pre_install": [
         "ensure \"$persist_dir\" | Out-Null",
-        "$path = \"$persist_dir\\sakura.exe.ini\"; if (!(Test-Path $path)) { Set-Content $path -Value \"[Settings]`nMultiUser=1`nUserRootFolder=0`nUserSubFolder=sakura\" }"
+        "$path = \"$persist_dir\\sakura.exe.ini\"",
+        "if (!(Test-Path $path)) {",
+        "    Set-Content $path -Value \"[Settings]`nMultiUser=1`nUserRootFolder=0`nUserSubFolder=sakura\"",
+        "}",
+
+        "@(",
+        "    'my_appicon.ico',",
+        "    'my_icons.bmp',",
+        "    'my_grepicon.ico'",
+        ")",
+        "| ForEach-Object {",
+        "    if (Test-Path \"$persist_dir\\$_\") {",
+        "        $current = versiondir 'sakura' $version",
+        "        New-Item -ItemType HardLink -Path \"$current\\$_\" -Target \"$persist_dir\\$_\" | Out-Null",
+        "    }",
+        "}"
     ],
     "persist": [
         "sakura.exe.ini",
@@ -36,5 +51,8 @@
             "url": "https://github.com/sakura-editor/sakura/releases/download/v${version}/${matchFilename}.md5"
         }
     },
-    "notes": "The configuration file (sakura.ini) will be installed in user specific application data folder (i.e. %APPDATA%\\sakura)"
+    "notes": [
+        "1. The configuration file (sakura.ini) will be installed in user specific application data folder (i.e. %APPDATA%\\sakura) instead of 'persist' folder.",
+        "2. Tips: If you have 'my_appicon.ico', 'my_icons.bmp' or 'my_grepicon.ico' in 'persist' folder, they will be used as icon images in the app."
+]
 }
