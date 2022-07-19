@@ -5,9 +5,9 @@
         "identifier": "Freeware",
         "url": "https://docs.microsoft.com/en-us/sysinternals/license-terms"
     },
-    "version": "5.10",
+    "version": "6.0",
     "url": "https://download.sysinternals.com/files/ZoomIt.zip",
-    "hash": "104e986cdb8ad44a62393e87e326c6861e9e71d1f801101da796e72acf54c811",
+    "hash": "61911099ec8b7bb0779655354f17ff9a3c9a11faef03ced8922cf03ace507e4e",
     "checkver": {
         "url": "https://docs.microsoft.com/en-us/sysinternals/downloads/zoomIt",
         "re": "ZoomIt\\s(?:v|V)?([\\d.]+)"
