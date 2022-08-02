@@ -1,5 +1,5 @@
 {
-    "version": "103.0",
+    "version": "103.0.1",
     "description": "Popular open source web browser with Japanese localization.",
     "homepage": "https://www.mozilla.org/firefox/",
     "license": "MPL-2.0",
@@ -11,12 +11,12 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://archive.mozilla.org/pub/firefox/releases/103.0/win64/ja/Firefox%20Setup%20103.0.exe#/dl.7z",
-            "hash": "sha512:51128be296468deeb15484f4775b3c34b1eb9f80aaefc284adf6249255aabe7a33f7105ca9d3634a5bf398cd94a4bdf9e851f10b75e8cbf9483203b26fc06b97"
+            "url": "https://archive.mozilla.org/pub/firefox/releases/103.0.1/win64/ja/Firefox%20Setup%20103.0.1.exe#/dl.7z",
+            "hash": "sha512:53321e9cfcaa97c955bf6623bcc91cc38cd88e598bc7cec08d088fe557e486d32d19310a968a6caf71387b9dd35e1fd1d24f9db3f5c915acde16e73abb04cbee"
         },
         "32bit": {
-            "url": "https://archive.mozilla.org/pub/firefox/releases/103.0/win32/ja/Firefox%20Setup%20103.0.exe#/dl.7z",
-            "hash": "sha512:12c5d5f1905aa6e49ed03fff269047fa0f167b49a7e8dbd3cbea64d6920ce36a7d5e329dab4959663f2a5b5d6a1afece2cc31cec915631a575b569682760e6cc"
+            "url": "https://archive.mozilla.org/pub/firefox/releases/103.0.1/win32/ja/Firefox%20Setup%20103.0.1.exe#/dl.7z",
+            "hash": "sha512:1749ea161aebb7f12b892ad8f4e51c8676ff8a87333f37f6b98430abb8a302c818b7f21ac052a56969fddd2782714db4124884c9d01ff96a4982c45e226d9ffc"
         }
     },
     "extract_dir": "core",
