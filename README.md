@@ -17,7 +17,7 @@ This repository includes:
 | flexible-renamer | Flexible Renamer |  | https://hp.vector.co.jp/authors/VA014830/FlexRena/ |
 | gekiore-regedit | GekiOreRegEdit a.k.a. '激動たる俺RegEdit改' | a registry editor | https://www.vector.co.jp/soft/win95/util/se295314.html |
 | hugin | Hugin | panorama stitcher | http://hugin.sourceforge.net/ |
-| johns-background-switcher | John’s Background Switcher |  | https://johnsad.ventures/software/backgroundswitcher/windows/ |
+| johns-background-switcher | John’s Background Switcher | periodically changes the background image | https://johnsad.ventures/software/backgroundswitcher/windows/ |
 | joytokey | JoyToKey | converts input from joysticks to virtual output of a keyboard or a mouse | https://joytokey.net/ja/ |
 | leeyes | Leeyes | image (comic) viewer<br>見開き画像ビューア | http://www3.tokai.or.jp/boxes/leeyes/ |
 | mousegesturel-ahk | MouseGestureL.ahk | a mouse gesture utility made of Autohotkey scripts | https://hp.vector.co.jp/authors/VA018351/mglahk.html |
