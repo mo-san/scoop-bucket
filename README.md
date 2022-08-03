@@ -12,6 +12,7 @@ This repository includes:
 | clibor | Clibor | Clipboard manager | https://chigusa-web.com/clibor/ |
 | cspoit | CSpoit a.k.a. 'パワースポイト' | Color picker | https://soft.utopiat.net/cspoit/ |
 | default-programs-editor | Default Programs Editor | File associations fixer | https://defaultprogramseditor.com/ |
+| domino | Domino | MIDI editor | https://takabosoft.com/domino |
 | everything-cli | everything-cli | Command line interface for Everything | https://www.voidtools.com/support/everything/command_line_interface/ |
 | firefox-jp | Firefox | Popular open source web browser with Japanese localization (Firefox 日本語版) | https://www.mozilla.org/firefox/ |
 | flexible-renamer | Flexible Renamer |  | https://hp.vector.co.jp/authors/VA014830/FlexRena/ |
