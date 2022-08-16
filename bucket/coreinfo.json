@@ -5,9 +5,9 @@
         "identifier": "Freeware",
         "url": "https://docs.microsoft.com/en-us/sysinternals/license-terms"
     },
-    "version": "3.52",
+    "version": "3.53",
     "url": "https://download.sysinternals.com/files/Coreinfo.zip",
-    "hash": "38474fc81f5b5c85befffd261ecb762ed0d38fcb8abd2aae3f73b3536818e94a",
+    "hash": "a35809a5364ab68444b2879491b4e742b302055279097dc83dbc0e0598242246",
     "checkver": {
         "url": "https://docs.microsoft.com/en-us/sysinternals/downloads/coreinfo",
         "re": "Coreinfo\\s(?:v|V)?([\\d.]+)"
