@@ -37,7 +37,8 @@
     "persist": [
         "UserSetting.json",
         "Bookmark.json",
-        "History.json"
+        "History.json",
+        "Playlists"
     ],
     "checkver": {
         "url": "https://bitbucket.org/neelabo/neeview/wiki/ChangeLog",
