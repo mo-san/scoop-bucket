@@ -14,9 +14,9 @@
         ]
     ],
     "pre_install": [
-        "Move-Item \"$dir\\Podesk\\PodeskSetup.exe\" \"$dir\\setup.exe\"",
-        "& \"$(appdir innounp)\\current\\innounp.exe\" -q -e \"$dir\\setup.exe\" -d\"$dir\" | Out-Null",
-        "Remove-Item  \"$dir\\setup.exe\", \"$dir\\install_script.iss\", \"$dir\\Podesk\" -Force -Recurse"
+        "Move-Item \"$dir\\Podesk2\\*\" \"$dir\\\"",
+        "& \"$(appdir innounp)\\current\\innounp.exe\" -q -e \"$dir\\PodeskSetup.exe\" -d\"$dir\" | Out-Null",
+        "Remove-Item  \"$dir\\PodeskSetup.exe\", \"$dir\\install_script.iss\", \"$dir\\Podesk2\" -Force -Recurse"
     ],
     "checkver": {
         "url": "https://forest.watch.impress.co.jp/library/software/podesk/",
