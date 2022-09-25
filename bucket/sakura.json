@@ -7,7 +7,7 @@
         "url": "https://github.com/sakura-editor/sakura/blob/master/LICENSE"
     },
     "url": "https://github.com/sakura-editor/sakura/releases/download/v2.4.1/sakura-tag-v2.4.1-build2849-ee8234f-Win32-Release-Exe.zip",
-    "hash": "4a906b211af88de6112e0cd636e867a2699202e36731140d9520b91b6649b319",
+    "hash": "md5:dcef1d95bd7aaeeb39c7fbba57d650b7",
     "bin": "sakura.exe",
     "shortcuts": [
         [
@@ -40,17 +40,18 @@
         "Plugins"
     ],
     "checkver": {
-        "url": "https://github.com/sakura-editor/sakura/releases/latest",
-        "regex": "/v([\\d.]+)/(?<filename>sakura-.+-Release-Exe.zip)"
+        "url": "https://api.github.com/repos/sakura-editor/sakura/releases/latest",
+        "regex": "\"browser_download_url\": *\"(?<filename>https://github.com/sakura-editor/sakura/releases/download/v([0-9.]+)/.+-Release-Exe.zip)\""
     },
     "autoupdate": {
-        "url": "https://github.com/sakura-editor/sakura/releases/download/v${version}/${matchFilename}",
+        "url": "$matchFilename",
         "hash": {
-            "url": "https://github.com/sakura-editor/sakura/releases/download/v${version}/${matchFilename}.md5"
+            "url": "$url.md5",
+            "regex": "$md5"
         }
     },
     "notes": [
         "1. The configuration file (sakura.ini) will be installed in user specific application data folder (i.e. %APPDATA%\\sakura) instead of 'persist' folder.",
         "2. Tips: If you have 'my_appicon.ico', 'my_icons.bmp' or 'my_grepicon.ico' in 'persist' folder, they will be used as icon images in the app."
-]
+    ]
 }
