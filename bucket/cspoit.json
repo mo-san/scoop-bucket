@@ -14,7 +14,10 @@
     ],
     "pre_install": [
         "ensure \"$persist_dir\" | Out-Null",
-        "$path = \"$persist_dir\\CSpoit.ini\"; if (!(Test-Path $path)) { New-Item $path | Out-Null }"
+        "$file = 'CSpoit.ini'",
+        "if (-not (Test-Path \"$persist_dir\\$file\")) {",
+        "    New-Item -Path \"$persist_dir\\$file\" -ItemType File | Out-Null",
+        "}"
     ],
     "persist": "CSpoit.ini",
     "checkver": {
