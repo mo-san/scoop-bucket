@@ -15,14 +15,26 @@
     ],
     "pre_install": [
         "ensure \"$persist_dir\" | Out-Null",
-        "$path = \"$persist_dir\\Flexible Renamer.ini\"; if (!(Test-Path $path)) { New-Item $path | Out-Null }"
+        "$file = 'Flexible Renamer.ini'",
+        "if (-not (Test-Path \"$persist_dir\\$file\")) {",
+        "    New-Item -Path \"$persist_dir\\$file\" -ItemType File | Out-Null",
+        "}",
+        "$file = 'Rename.log'",
+        "if (-not (Test-Path \"$persist_dir\\$file\")) {",
+        "    # Create empty text file as UTF16 with BOM",
+        "    Set-Content -Value '' -Path \"$persist_dir\\$file\" -Encoding unicode -NoNewline",
+        "}"
     ],
-    "persist": "Flexible Renamer.ini",
+    "persist": [
+        "Flexible Renamer.ini",
+        "Rename.log"
+    ],
     "checkver": {
         "url": "https://forest.watch.impress.co.jp/library/software/flexrenamer/",
         "regex": "<dd>v(.+)（.+</dd>"
     },
     "autoupdate": {
-        "url": "https://dforest.watch.impress.co.jp/library/f/flexrenamer/10463/FlexRena${cleanVersion}.zip"
+        "url": "https://dforest.watch.impress.co.jp/library/f/flexrenamer/10463/FlexRena${cleanVersion}.zip",
+        "extract_dir": "FlexRena${cleanVersion}"
     }
 }
