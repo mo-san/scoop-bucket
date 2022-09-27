@@ -18,6 +18,7 @@ This repository includes:
 | flexible-renamer | Flexible Renamer |  | https://hp.vector.co.jp/authors/VA014830/FlexRena/ |
 | gekiore-regedit | GekiOreRegEdit a.k.a. '激動たる俺RegEdit改' | a registry editor | https://www.vector.co.jp/soft/win95/util/se295314.html |
 | gom-player | GOM Player | video player | https://www.gomlab.com/gomplayer-media-player/ |
+| gom-player-plus | GOM Player Plus | video player (paid version) | https://www.gomlab.com/gomplayerplus-media-player/ |
 | hugin | Hugin | panorama stitcher | http://hugin.sourceforge.net/ |
 | johns-background-switcher | John’s Background Switcher | periodically changes the background image | https://johnsad.ventures/software/backgroundswitcher/windows/ |
 | joytokey | JoyToKey | converts input from joysticks to virtual output of a keyboard or a mouse | https://joytokey.net/ja/ |
