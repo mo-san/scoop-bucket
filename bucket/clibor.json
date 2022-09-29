@@ -15,20 +15,58 @@
     ],
     "pre_install": [
         "ensure \"$persist_dir\" | Out-Null",
-        "$target = \"$persist_dir\\Clibor.xml\"",
-        "if (Test-Path $target) {",
-        "    New-Item -ItemType HardLink -Path \"$dir\" -Name Clibor.xml -Value $target | Out-Null",
+        "@(",
+        "    'Clibor.xml',",
+        "    'excl.dat',",
+        "    'excl.xml',",
+        "    'frmt.dat',",
+        "    'frmt.xml',",
+        "    'ww.dat',",
+        "    'ww.xml',",
+        "    'migemo.dll'",
+        ") | ForEach-Object {",
+        "    if (Test-Path \"$persist_dir\\$_\") {",
+        "        New-Item -Path \"$dir\\$_\" -Value \"$persist_dir\\$_\" -ItemType HardLink | Out-Null",
+        "    }",
         "}"
     ],
     "persist": [
+        "budt",
         "ch",
-        "ct"
+        "ct",
+        "dict"
     ],
     "post_install": [
-        "$path = \"$dir\\persist_config.ps1\"",
-        "if (!(Test-Path $path)) {",
-        "  Set-Content $path -Value \"`$appdir = `\"`$(scoop prefix clibor)`\"`n`$path = [uri]::new(`\"`$appdir\\..\\..\\..\\persist\\clibor`\").AbsolutePath`n`$target = `\"`$appdir\\Clibor.xml`\"`nif (!(Test-Path `\"`$path\\Clibor.xml`\") -and (Test-Path `$target)) {`n    New-Item -ItemType HardLink -Path `$path -Name Clibor.xml -Value `$target`n}\"",
-        "}"
+        "Set-Content \"$dir\\persist_config.ps1\" -Value @\"",
+        "# Exit if never launched the app.",
+        "if (-not (Test-Path \"$dir\\Clibor.xml\")) {",
+        "    \"You must run Clibor at least once!\"",
+        "    exit",
+        "}",
+        "",
+        "if (-not (Test-Path \"$persist_dir\\Clibor.xml\")) {",
+        "    New-Item -Path \"$persist_dir\\Clibor.xml\" -Value \"$dir\\Clibor.xml\" -ItemType HardLink",
+        "}",
+        "",
+        "# Here we persist data files and backup them if one with another extension already exists.",
+        "# These files will be created along with Clibor.xml on first run.",
+        "@(",
+        "    'excl', # histories to be excluded",
+        "    'frmt', # string formatters",
+        "    'ww' # windows to be (not) monitored",
+        ") | ForEach-Object {",
+        "    # Files in XML version will be there if you choose not to encrypt data.",
+        "    `$alt = if (Test-Path \"$dir\\`$_.dat\") { \"$persist_dir\\`$_.xml\" } else { \"$persist_dir\\`$_.dat\" }",
+        "    if (Test-Path `$alt) {",
+        "        `$date = (Get-Date -Format \"yyyyMMdd_HHmmss\")",
+        "        Rename-Item -Path `$alt -NewName (`$alt -replace \"`$\", \".`$date.bak\")",
+        "    }",
+        "",
+        "    `$ext = if (Test-Path \"$dir\\`$_.dat\") { \"dat\" } else { \"xml\" }",
+        "    `$filename = \"`$_.`$ext\"",
+        "    New-Item -Path \"$persist_dir\\`$filename\" -Value \"$dir\\`$filename\" -ItemType HardLink -Force",
+        "}",
+        "\"@"
     ],
     "checkver": {
         "url": "https://forest.watch.impress.co.jp/library/software/clibor/",
@@ -37,5 +75,10 @@
     "autoupdate": {
         "url": "https://dforest.watch.impress.co.jp/library/c/clibor/10713/clibor.zip"
     },
-    "notes": "To backup your config file (Clibor.xml), run 'scoop\\apps\\clibor\\current\\persist_config.ps1' AFTER first run of clibor."
+    "notes": [
+        "To backup your config files, run '$dir\\persist_config.ps1' *AFTER* you run Clibor at least once.",
+        "Also, it is advised to do so each time you change preference to (not) encrypt data.",
+        "設定ファイルをバックアップするために、Cliborを最低一度でも起動したあと、 '$dir\\persist_config.ps1' を実行しておくとよいです。",
+        "また、データを暗号化する/しないの設定を切り替えるたびにも実行することをおすすめします。"
+    ]
 }
