@@ -5,9 +5,9 @@
         "identifier": "Freeware",
         "url": "https://docs.microsoft.com/en-us/sysinternals/license-terms"
     },
-    "version": "August.16.2022",
+    "version": "September.29.2022",
     "url": "https://download.sysinternals.com/files/SysinternalsSuite-Nano.zip",
-    "hash": "f270d19689d9763c70d6b4ea559cfb9dda8104036fe62123de9e9c650314a5d3",
+    "hash": "c3f0e3ebc9039840b07ebb6f6dd6196ad12a93f29fdd6b25f0785b132cafbe2c",
     "checkver": {
         "url": "https://docs.microsoft.com/en-us/sysinternals/downloads/sysinternals-suite",
         "re": "\\bUpdated:\\s*(\\w+)\\s+(\\d+),\\s+(\\d+)\\b",
