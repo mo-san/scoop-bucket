@@ -5,9 +5,9 @@
         "identifier": "Freeware",
         "url": "https://docs.microsoft.com/en-us/sysinternals/license-terms"
     },
-    "version": "4.31",
+    "version": "4.32",
     "url": "https://download.sysinternals.com/files/BGInfo.zip",
-    "hash": "e9ad4a9a8365c8b308bdd5ab408bd9039f175b83101c076f3912c1d2b59d4aaf",
+    "hash": "c15b4c6cb8bd33f941a727316776aa068fc0c3d95159b6989ec6c520ae259fcc",
     "checkver": {
         "url": "https://docs.microsoft.com/en-us/sysinternals/downloads/bginfo",
         "re": "BgInfo\\s(?:v|V)?([\\d.]+)"
