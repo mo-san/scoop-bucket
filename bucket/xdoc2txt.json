@@ -1,4 +1,5 @@
 {
+    "$schema": "https://raw.githubusercontent.com/lukesampson/scoop/master/schema.json",
     "version": "2.20",
     "description": "xdoc2txt: extracts texts from PDF, Word (docx) and Excel (xlsx)",
     "homepage": "http://ebstudio.info/home/xdoc2txt.html",

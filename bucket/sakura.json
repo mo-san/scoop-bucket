@@ -1,4 +1,5 @@
 {
+    "$schema": "https://raw.githubusercontent.com/lukesampson/scoop/master/schema.json",
     "version": "2.4.1",
     "description": "Sakura Editor: a text editor (original name is 'サクラエディタ')",
     "homepage": "https://sakura-editor.github.io/",

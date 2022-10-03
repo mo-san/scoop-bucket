@@ -1,4 +1,5 @@
 {
+    "$schema": "https://raw.githubusercontent.com/lukesampson/scoop/master/schema.json",
     "version": "2021.0.0",
     "description": "Hugin: panorama stitcher",
     "homepage": "http://hugin.sourceforge.net/",

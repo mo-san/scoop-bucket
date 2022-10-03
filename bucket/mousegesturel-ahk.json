@@ -1,4 +1,5 @@
 {
+    "$schema": "https://raw.githubusercontent.com/lukesampson/scoop/master/schema.json",
     "version": "1.39",
     "description": "MouseGestureL.ahk: a mouse gesture utility made of Autohotkey scripts",
     "homepage": "https://hp.vector.co.jp/authors/VA018351/mglahk.html",

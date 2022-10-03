@@ -1,4 +1,5 @@
 {
+    "$schema": "https://raw.githubusercontent.com/lukesampson/scoop/master/schema.json",
     "version": "20200307",
     "description": "a font, MPlus and IPA Gothic mixed",
     "license": {

@@ -1,4 +1,5 @@
 {
+    "$schema": "https://raw.githubusercontent.com/lukesampson/scoop/master/schema.json",
     "version": "2.2",
     "description": "CSpoit: a color picker (original name is 'パワースポイト')",
     "homepage": "https://soft.utopiat.net/cspoit/",

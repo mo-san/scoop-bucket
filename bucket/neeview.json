@@ -1,8 +1,9 @@
 {
+    "$schema": "https://raw.githubusercontent.com/lukesampson/scoop/master/schema.json",
+    "version": "39.5",
     "homepage": "https://bitbucket.org/neelabo/neeview/",
     "description": "An image viewer that allows you to browse images in a folder like a book.",
     "license": "MIT",
-    "version": "39.5",
     "architecture": {
         "64bit": {
             "url": "https://bitbucket.org/neelabo/neeview/downloads/NeeView39.5-x64.zip",
