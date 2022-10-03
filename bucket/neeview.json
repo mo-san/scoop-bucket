@@ -1,5 +1,6 @@
 {
     "homepage": "https://bitbucket.org/neelabo/neeview/",
+    "description": "An image viewer that allows you to browse images in a folder like a book.",
     "license": "MIT",
     "version": "39.5",
     "architecture": {
@@ -18,24 +19,49 @@
     "shortcuts": [
         [
             "NeeView.exe",
-            "NeeView"
+            "NeeView",
+            "--setting=\"$persist_dir\\UserSetting.json\""
         ]
     ],
-    "pre_install": [
-        "ensure \"$persist_dir\" | Out-Null",
+    "post_install": [
+        "# We need to run this app once when this is the first time to install,",
+        "# because it creates files to be persisted after first run.",
+        "",
+        "$script:firstInstall = $False",
         "@(",
-        "    'UserSetting.json',",
         "    'Bookmark.json',",
-        "    'History.json'",
+        "    'History.json',",
+        "    'UserSetting.json'",
         ") | ForEach-Object {",
-        "    $path = \"$persist_dir\\$_\"",
-        "    if (!(Test-Path $path)) {",
-        "        New-Item $path -ItemType File | Out-Null",
+        "    # If no persist data exist, scoop creates folders instead of json files.",
+        "    # If we found them, then now is the first time to install.",
+        "    if (Test-Path -Path $persist_dir\\$_ -PathType Container) {",
+        "        Remove-Item -Path $persist_dir\\$_",
+        "        # Call cmd because junctions cannot be deleted by Remove-Item",
+        "        cmd /c \"rmdir /s /q $original_dir\\$_\"",
+        "        $script:firstInstall = $True",
         "    }",
+        "}",
+        "",
+        "if ($firstInstall) {",
+        "    Start-Process -FilePath $original_dir\\NeeView.exe",
+        "    # Wait until the app is launched",
+        "    while ( 0 -eq (Get-Process -Name NeeView -ErrorAction SilentlyContinue).Count ) {",
+        "        Start-Sleep -Milliseconds 200",
+        "    }",
+        "    $appPid = (Get-Process -Name NeeView).ID",
+        "    # FInd a better way to detect the app is fully launched",
+        "    Start-Sleep -Seconds 5",
+        "    # taskkill 'gracefully' stops a process as if the user clicks x button,",
+        "    # however Stop-Process does not",
+        "    taskkill /PID $appPid | Out-Null",
+        "    # Wait until the app exits",
+        "    Wait-Process -Id $appPid",
+        "    persist_data $manifest $original_dir $persist_dir",
+        "    Copy-Item -Path UserSetting.json -Destination $persist_dir",
         "}"
     ],
     "persist": [
-        "UserSetting.json",
         "Bookmark.json",
         "History.json",
         "Playlists"
