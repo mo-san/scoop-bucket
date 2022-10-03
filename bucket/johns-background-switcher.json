@@ -1,6 +1,6 @@
 {
     "version": "5.4.0.1",
-    "description": "John’s Background Switcher",
+    "description": "John’s Background Switcher: periodically changes the background image on your Windows computer to something awesome",
     "homepage": "https://johnsad.ventures/software/backgroundswitcher/windows/",
     "license": "Proprietary",
     "url": "https://dl.johnsadventures.com/JBS-5.4.0.1.zip",
@@ -9,7 +9,7 @@
     "shortcuts": [
         [
             "BackgroundSwitcher.exe",
-            "BackgroundSwitcher"
+            "JohnsBackgroundSwitcher"
         ]
     ],
     "checkver": {
