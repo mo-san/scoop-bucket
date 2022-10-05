@@ -2,7 +2,7 @@
     "$schema": "https://raw.githubusercontent.com/lukesampson/scoop/master/schema.json",
     "version": "4.03",
     "description": "CLaunch: a skin-customizable button-based program launcher",
-    "homepage": "http://hp.vector.co.jp/authors/VA018351/claunch.html",
+    "homepage": "https://hp.vector.co.jp/authors/VA018351/claunch.html",
     "license": "Freeware",
     "architecture": {
         "64bit": {
@@ -28,7 +28,7 @@
         "Plugins"
     ],
     "checkver": {
-        "url": "http://hp.vector.co.jp/authors/VA018351/history_cl.html",
+        "url": "https://hp.vector.co.jp/authors/VA018351/history_cl.html",
         "regex": ">Ver\\. ([\\d.]+)"
     },
     "autoupdate": {
