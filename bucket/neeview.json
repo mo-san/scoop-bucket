@@ -59,13 +59,13 @@
         "    # Wait until the app exits",
         "    Wait-Process -Id $appPid",
         "    persist_data $manifest $original_dir $persist_dir",
-        "    Copy-Item -Path UserSetting.json -Destination $persist_dir",
+        "    Copy-Item -Path $original_dir\\UserSetting.json -Destination $persist_dir",
         "}"
     ],
     "persist": [
+        "Playlists",
         "Bookmark.json",
-        "History.json",
-        "Playlists"
+        "History.json"
     ],
     "checkver": {
         "url": "https://bitbucket.org/neelabo/neeview/wiki/ChangeLog",
