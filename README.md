@@ -56,3 +56,64 @@ This repository includes:
 | [vb6runtime](./bucket/vb6runtime.json)                                   | Visual Basic 6.0 SP6 runtime files                |                                                                                                               | https://www.vector.co.jp/soft/dl/win95/util/se342080.html            |
 | [vieasex](./bucket/vieasex.json)                                         | VieasEx                                           | Image viewer                                                                                                  | https://www.vieas.com/software/vieas.html                            |
 | [xdoc2txt](./bucket/xdoc2txt.json)                                       | xdoc2txt                                          | extracts texts from PDF, Word (docx) and Excel (xlsx)                                                         | http://ebstudio.info/home/xdoc2txt.html                              |
+
+----------------
+
+## Note about installing fonts
+- It is recommended to install fonts system-wide, adding `--global` option: e.g. `scoop install --global mo-san/font-hackgen` (admin rights needed).
+  - This is because some apps might not support the feature to install fonts locally, which was introduced after Windows Version 1809.
+- フォントのインストールの際は `--global` オプションを付けて、システム全体にインストールすることをおすすめします。たとえば `scoop install --global mo-san/font-hackgen` のように(要管理者権限)。
+  - Windows Version 1809 以降ではユーザーごとにインストールすることもできますが、アプリによっては対応していないことがあるからです。
+
+### Differences among HackGen series
+Source: https://github.com/yuru7/HackGen/blob/master/README.md
+
+| フォント名             | 文字幅比率    | 記号 | コードポイントが衝突した際<br>(例: `﨑` (たつさき/U+FA11) など) | 備考                                                                                                                           |
+|------------------------|---------------|------|-----------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------|
+| HackGen                | 半角1 : 全角2 | 全角 | -                                                               | 通常版の白源。                                                                                                                 |
+| HackGen Console        | 半角1 : 全角2 | 半角 | -                                                               | 矢印記号などの多くの記号が半角で表示される。<br>コンソールでの利用や記号類は可能な限り半角で表示したい人にオススメ。           |
+| HackGen Console NF     | 半角1 : 全角2 | 半角 | Nerd Font 優先                                                  | 同上                                                                                                                           |
+| HackGen Console NFJ    | 半角1 : 全角2 | 半角 | 日本語優先                                                      | 同上                                                                                                                           |
+| HackGen 35             | 半角3 : 全角5 | 全角 | -                                                               | 数字が通常版の白源よりも大きく表示される。<br>日本語が少ない文書やコードの場合にはこちらの方が読みやすいと感じるかもしれない。 |
+| HackGen 35 Console     | 半角3 : 全角5 | 半角 | -                                                               | 同上                                                                                                                           |
+| HackGen 35 Console NF  | 半角3 : 全角5 | 半角 | Nerd Font 優先                                                  | 同上                                                                                                                           |
+| HackGen 35 Console NFJ | 半角3 : 全角5 | 半角 | 日本語優先                                                      | 同上                                                                                                                           |
+
+### Differences among Migmix series
+Source: https://mix-mplus-ipa.osdn.jp/migmix/
+
+MigMix 1P, MigMix 1M, MigMix 2P, MigMix 2M
+
+- 1P vs 2P
+  - 英数は、 `3 M g y & * @` だけ異なる
+  - ひらがな・カタカナは、2Pの方が小さめ
+  - 漢字は、字形は同じだが2Pの方が小さめ
+- 1M vs 2M
+  - 英数は、 `0 3 M g y *` だけ異なる
+	- 2M では半角`0` の内側が斜線
+  - ひらがな・カタカナは、2Mの方が小さめ
+  - 漢字は、字形は同じだが2Mの方が小さめ
+- 1P vs 1M
+  - 等幅か可変幅(プロポーショナル)か
+
+### Differences among Migu series
+Source: https://mix-mplus-ipa.osdn.jp/migu/
+
+Migu 1C, Migu 1M, Migu 1P, Migu 2M
+
+- -: not supported
+- ○: partially supported
+- ●: supported
+
+| 特徴                                                                                      | MigMix 1P/2P | Migu 1P | Migu 1C | MigMix 1M/2M | Migu 1M | Migu 2M |
+|:------------------------------------------------------------------------------------------|:------------:|:-------:|:-------:|:------------:|:-------:|:-------:|
+| 等幅 or プロポーショナル(P)                                                               |      P       |    P    |    P    |     等幅     |  等幅   |  等幅   |
+| 全角ひらがな・カタカナもプロポーショナル                                                  |      -       |    -    |    ●    |      -       |    -    |    -    |
+| 行間（縦の高さ。多いほうが縦幅大きい）                                                    |     1485     |  1485   |  1485   |     1485     |  1110   |  1110   |
+| 半濁点が大きい                                                                            |      -       |    ●    |    ●    |      -       |    ●    |    -    |
+| `0O`（数字ゼロ・大文字オー）の区別                                                        |      -       |    -    |    ●    |      ○       |    ●    |    ○    |
+| 1Il（数字１・大文字アイ・小文字エル）の区別                                               |      -       |    ○    |    ●    |      ●       |    ●    |    ●    |
+| `カ力` `エ工` `ロ口` `ー一`<br>`ニ二`（カタカナ・漢字）`へヘ`（ひらがな・カタカナ）の区別 |      -       |    ●    |    ●    |      -       |    ●    |    ○    |
+| `〜～`（波ダッシュ・全角チルダ）の区別                                                    |      -       |    ●    |    ●    |      -       |    ●    |    -    |
+| 数学記号や一部のギリシャ・ロシア文字が全角                                                |      -       |    -    |    -    |      -       |    ●    |    ●    |
+| JIS2004漢字字形                                                                           |      -       |    ●    |    ●    |      -       |    ●    |    ●    |
