@@ -39,15 +39,15 @@
         "script": [
             "# We need to download the zip archive to retrieve a 'readme' inside and get the version number.",
             "$destDir = New-TemporaryFile | ForEach-Object { Remove-Item $_; mkdir $_ }",
-            "$destPath = \"$destDir\\KDE Mover-Sizer.nfo\"",
-            "$zipPath = \"$destDir\\dl.zip\"",
+            "$destPath = Join-Path $destDir 'KDE Mover-Sizer.nfo'",
+            "$zipPath = Join-Path $destDir dl.zip",
             "$url = 'https://corz.org/engine?section=windows/accessories&download=KDE%20Mover-Sizer%20for%20Windows%20x64.zip'",
             "Invoke-WebRequest -Uri $url -OutFile $zipPath",
             "",
             "Add-Type -Assembly System.IO.Compression.FileSystem",
             "$zip = [IO.Compression.ZipFile]::OpenRead($zipPath)",
             "$file = ($zip.Entries | Where-Object { $_.Name -eq 'KDE Mover-Sizer.nfo' })[0]",
-            "[System.IO.Compression.ZipFileExtensions]::ExtractToFile($file, $destPath, $true)",
+            "[IO.Compression.ZipFileExtensions]::ExtractToFile($file, $destPath)",
             "$zip.Dispose()",
             "Get-Content $destPath",
             "Remove-Item $destDir -Recurse"
