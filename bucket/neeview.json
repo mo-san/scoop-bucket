@@ -58,6 +58,8 @@
         "    taskkill /PID $appPid | Out-Null",
         "    # Wait until the app exits",
         "    Wait-Process -Id $appPid",
+        "",
+        "    cmd /c \"rmdir /s /q $original_dir\\Playlists\"",
         "    persist_data $manifest $original_dir $persist_dir",
         "    Copy-Item -Path $original_dir\\UserSetting.json -Destination $persist_dir",
         "}"
