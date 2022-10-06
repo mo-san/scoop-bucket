@@ -31,8 +31,8 @@
         "    New-Item -Path (Join-Path $persist_dir $file) -ItemType File | Out-Null",
         "}",
         "",
-        "Move-Item -Path \"$dir\\AutoHotKey Source\\*\" -Destination $dir",
-        "Remove-Item -Path \"$dir\\AutoHotKey Source\" -Recurse"
+        "Move-Item -Path (Join-Path $dir 'AutoHotKey Source' *) -Destination $dir",
+        "Remove-Item -Path (Join-Path $dir 'AutoHotKey Source') -Recurse"
     ],
     "persist": "KDE_Mover-Sizer.ini",
     "checkver": {

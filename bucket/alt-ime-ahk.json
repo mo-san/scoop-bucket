@@ -15,13 +15,13 @@
     ],
     "pre_install": [
         "# Additionally download AutoHotKey source code",
-        "$sourcePath = \"$dir\\dl.zip\"",
+        "$sourcePath = (Join-Path $dir dl.zip)",
         "Invoke-WebRequest https://github.com/karakaram/alt-ime-ahk/archive/refs/tags/v${version}.zip -OutFile $sourcePath",
         "",
         "Add-Type -Assembly System.IO.Compression.FileSystem",
         "$zip = [IO.Compression.ZipFile]::OpenRead($sourcePath)",
         "$zip.Entries | Where-Object FullName -match '^[^/]+/.+' `",
-        "| ForEach-Object { [System.IO.Compression.ZipFileExtensions]::ExtractToFile($_, \"$dir\\$($_.Name)\") }",
+        "| ForEach-Object { [System.IO.Compression.ZipFileExtensions]::ExtractToFile($_, (Join-Path $dir $_.Name)) }",
         "$zip.Dispose()",
         "Remove-Item $sourcePath"
     ],
