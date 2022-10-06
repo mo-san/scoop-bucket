@@ -4,6 +4,7 @@
     "description": "PiCo: detects similar or duplicate pictures",
     "homepage": "http://xration.sakura.ne.jp/htmls/program.htm",
     "license": "Proprietary",
+    "depends": "vb6runtime",
     "url": [
         "http://xration.sakura.ne.jp/images/program/PICO016a.lzh",
         "https://www.digitalpad.co.jp/~takechin/archives/ifjpeg034.zip"
@@ -20,7 +21,7 @@
         ]
     ],
     "pre_install": [
-        "ensure \"$persist_dir\" | Out-Null",
+        "ensure $persist_dir | Out-Null",
         "$file = 'settings.ini'",
         "if (-not (Test-Path (Join-Path $persist_dir $file))) {",
         "    New-Item -Path (Join-Path $persist_dir $file) -ItemType File | Out-Null",
