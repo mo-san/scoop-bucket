@@ -23,8 +23,8 @@
         "Remove-Item -Path \"$dir\\x86\" -Recurse",
         "",
         "$file = 'SuperTagEditor.ini'",
-        "if (-not (Test-Path \"$persist_dir\\$file\")) {",
-        "    New-Item -Path \"$persist_dir\\$file\" -ItemType File | Out-Null",
+        "if (-not (Test-Path (Join-Path $persist_dir $file))) {",
+        "    New-Item -Path (Join-Path $persist_dir $file) -ItemType File | Out-Null",
         "}"
     ],
     "persist": [

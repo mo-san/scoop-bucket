@@ -19,8 +19,8 @@
     "pre_install": [
         "ensure \"$persist_dir\" | Out-Null",
         "$file = 'sakura.exe.ini'",
-        "if (-not (Test-Path \"$persist_dir\\$file\")) {",
-        "    Set-Content \"$persist_dir\\$file\" -Value @\"",
+        "if (-not (Test-Path (Join-Path $persist_dir $file))) {",
+        "    Set-Content (Join-Path $persist_dir $file) -Value @\"",
         "[Settings]",
         "MultiUser=1",
         "UserRootFolder=0",
@@ -32,9 +32,9 @@
         "    'my_icons.bmp',",
         "    'my_grepicon.ico'",
         ") | ForEach-Object {",
-        "    if (Test-Path \"$persist_dir\\$_\") {",
+        "    if (Test-Path (Join-Path $persist_dir $_)) {",
         "        $current = versiondir 'sakura' $version",
-        "        New-Item -ItemType HardLink -Path \"$current\\$_\" -Target \"$persist_dir\\$_\" | Out-Null",
+        "        New-Item -ItemType HardLink -Path \"$current\\$_\" -Target (Join-Path $persist_dir $_) | Out-Null",
         "    }",
         "}"
     ],

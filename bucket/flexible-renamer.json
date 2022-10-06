@@ -17,13 +17,13 @@
     "pre_install": [
         "ensure \"$persist_dir\" | Out-Null",
         "$file = 'Flexible Renamer.ini'",
-        "if (-not (Test-Path \"$persist_dir\\$file\")) {",
-        "    New-Item -Path \"$persist_dir\\$file\" -ItemType File | Out-Null",
+        "if (-not (Test-Path (Join-Path $persist_dir $file))) {",
+        "    New-Item -Path (Join-Path $persist_dir $file) -ItemType File | Out-Null",
         "}",
         "$file = 'Rename.log'",
-        "if (-not (Test-Path \"$persist_dir\\$file\")) {",
+        "if (-not (Test-Path (Join-Path $persist_dir $file))) {",
         "    # Create empty text file as UTF16 with BOM",
-        "    Set-Content -Value '' -Path \"$persist_dir\\$file\" -Encoding unicode -NoNewline",
+        "    Set-Content -Value '' -Path (Join-Path $persist_dir $file) -Encoding unicode -NoNewline",
         "}"
     ],
     "persist": [

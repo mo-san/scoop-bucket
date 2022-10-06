@@ -24,7 +24,7 @@
         "    'Uninstall.exe',",
         "    'Uninstall.dat'",
         ") | ForEach-Object {",
-        "    Remove-Item \"$dir\\$_\" -Force -Recurse",
+        "    Remove-Item (Join-Path $dir $_) -Force -Recurse",
         "}"
     ],
     "checkver": {
