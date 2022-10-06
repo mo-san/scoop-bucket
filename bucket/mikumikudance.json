@@ -3,21 +3,32 @@
     "description": "MikuMikuDance or MMD is a tool for creating 3D animations",
     "homepage": "https://sites.google.com/view/vpvp/",
     "license": "Freeware",
+    "notes": [
+        "To run MMD properly, you have to install the following packages with ADMINISTRATOR PRIVILEGES:",
+        "--> \"scoop install extras/vcredist2008 extras/vcredist2010 directx2010\""
+    ],
+    "suggest": {
+        "Visual C++ Redistributable 2008": "extras/vcredist2008",
+        "Visual C++ Redistributable 2010": "extras/vcredist2010",
+        "DirectX End-User Runtimes": "directx2010"
+    },
     "architecture": {
         "64bit": {
-            "url": "https://drive.google.com/uc?id=1Iucxu0tDsD05Siyv8VBGgm9vjD-f-RhM&amp;export=download",
-            "hash": "7edccd3a29fae3bfd217b2e75e526d13ac844828c7dbc927e959e3eecee29874"
+            "url": "https://drive.google.com/uc?id=1Iucxu0tDsD05Siyv8VBGgm9vjD-f-RhM&amp;export=download#/dl.7z",
+            "hash": "7edccd3a29fae3bfd217b2e75e526d13ac844828c7dbc927e959e3eecee29874",
+            "extract_dir": "MikuMikuDance_v932x64"
         },
         "32bit": {
-            "url": "https://drive.google.com/uc?id=1yU-gfmbQASkp3G3lv-TrYWQbMD96xQrq&amp;export=download",
-            "hash": "3e15ba602a0f09714152d635814ecc80a39ea42cc5c53144e4aa297d07fc76b2"
+            "url": "https://drive.google.com/uc?id=1yU-gfmbQASkp3G3lv-TrYWQbMD96xQrq&amp;export=download#/dl.7z",
+            "hash": "3e15ba602a0f09714152d635814ecc80a39ea42cc5c53144e4aa297d07fc76b2",
+            "extract_dir": "MikuMikuDance_v932"
         }
     },
     "pre_install": [
         "ensure \"$persist_dir\" | Out-Null",
-        "$file = 'mmconfig.ini'",
-        "if (-not (Test-Path \"$persist_dir\\$file\")) {",
-        "    New-Item -Path \"$persist_dir\\$file\" -ItemType File | Out-Null",
+        "$file = 'Data\\mmconfig.ini'",
+        "if (-not (Test-Path (Join-Path $persist_dir $file))) {",
+        "    New-Item -Path (Join-Path $dir $file) -ItemType File | Out-Null",
         "}"
     ],
     "bin": "MikuMikuDance.exe",
@@ -60,11 +71,11 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "$matchLink64",
+                "url": "$matchLink64#/dl.7z",
                 "extract_dir": "MikuMikuDance_v${cleanVersion}x64"
             },
             "32bit": {
-                "url": "$matchLink32",
+                "url": "$matchLink32#/dl.7z",
                 "extract_dir": "MikuMikuDance_v${cleanVersion}"
             }
         }
