@@ -4,7 +4,6 @@
     "description": "Podesk: a virtual desktop switcher with only mouse moves",
     "homepage": "https://forest.watch.impress.co.jp/library/software/podesk/",
     "license": "",
-    "depends": "innounp",
     "url": "https://dforest.watch.impress.co.jp/library/p/podesk/12042/Podesk2.zip#/dl.zip",
     "hash": "3aa2c2f4338c487f32bb9b41d4a2332d5796bed2c7a9ac672f99dfd8b9810001",
     "bin": "Podesk.exe",
@@ -15,9 +14,9 @@
         ]
     ],
     "pre_install": [
-        "Move-Item \"$dir\\Podesk2\\*\" \"$dir\\\"",
-        "& \"$(appdir innounp)\\current\\innounp.exe\" -q -e \"$dir\\PodeskSetup.exe\" -d\"$dir\" | Out-Null",
-        "Remove-Item  \"$dir\\PodeskSetup.exe\", \"$dir\\install_script.iss\", \"$dir\\Podesk2\" -Force -Recurse"
+        "Move-Item (Join-Path $dir Podesk2 *) $dir",
+        "Expand-InnoArchive -Path (Join-Path $dir PodeskSetup.exe) -DestinationPath $dir",
+        "Remove-Item  (Join-Path $dir PodeskSetup.exe), (Join-Path $dir Podesk2) -Force -Recurse"
     ],
     "checkver": {
         "url": "https://forest.watch.impress.co.jp/library/software/podesk/",
