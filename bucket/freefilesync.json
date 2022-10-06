@@ -1,14 +1,14 @@
 {
     "$schema": "https://raw.githubusercontent.com/lukesampson/scoop/master/schema.json",
-    "version": "11.25",
+    "version": "11.26",
     "description": "a folder comparison and synchronization software",
     "homepage": "https://freefilesync.org",
     "license": {
         "identifier": "Freeware",
         "url": "https://freefilesync.org/faq.php#commercial-usage"
     },
-    "url": "https://freefilesync.org/download/FreeFileSync_11.25_Windows_Setup.exe",
-    "hash": "dbe9f0bc7ea816a2cccb4a45ac8573eed209c46a5748cc5702b13b06380f36cb",
+    "url": "https://freefilesync.org/download/FreeFileSync_11.26_Windows_Setup.exe",
+    "hash": "9f7dae59c02faa3d6408f3752bf642e0cf1765f891232a539015b456f9d2be0e",
     "innosetup": true,
     "bin": [
         "FreeFileSync.exe",
