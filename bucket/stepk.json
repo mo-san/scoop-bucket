@@ -15,7 +15,7 @@
         ]
     ],
     "pre_install": [
-        "ensure \"$persist_dir\" | Out-Null",
+        "ensure $persist_dir | Out-Null",
         "",
         "$arch = if ($architecture -eq '64bit') { 'x64' } else { 'x86' }",
         "Move-Item -Path \"$dir\\$arch\\*\" -Destination $dir",
