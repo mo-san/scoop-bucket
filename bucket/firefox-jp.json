@@ -22,12 +22,12 @@
     },
     "extract_dir": "core",
     "post_install": [
-        "ensure \"$persist_dir\\Profiles\\Scoop\" | Out-Null",
-        "firefox -CreateProfile \"Scoop $persist_dir\\Profiles\\Scoop\"",
-        "$Addition = \"$persist_dir\\addition\"",
+        "ensure (Join-Path $persist_dir Profiles Scoop) | Out-Null",
+        "firefox -CreateProfile \"Scoop $(Join-Path $persist_dir Profiles Scoop)\"",
+        "$Addition = Join-Path $persist_dir addition",
         "if (Test-Path $Addition) {",
         "  info 'Copying additional items...'",
-        "  Copy-Item -Path $Addition\\* -Destination $dir -Force -Recurse -ErrorAction SilentlyContinue",
+        "  Copy-Item -Path (Join-Path $Addition *) -Destination $dir -Force -Recurse -ErrorAction SilentlyContinue",
         "}"
     ],
     "bin": "firefox.exe",

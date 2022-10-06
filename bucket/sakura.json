@@ -34,7 +34,7 @@
         ") | ForEach-Object {",
         "    if (Test-Path (Join-Path $persist_dir $_)) {",
         "        $current = versiondir 'sakura' $version",
-        "        New-Item -ItemType HardLink -Path \"$current\\$_\" -Target (Join-Path $persist_dir $_) | Out-Null",
+        "        New-Item -ItemType HardLink -Path (Join-Path $current $_) -Target (Join-Path $persist_dir $_) | Out-Null",
         "    }",
         "}"
     ],
