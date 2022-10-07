@@ -12,7 +12,7 @@
     "extract_dir": "migmix-1m-20200307",
     "installer": {
         "script": [
-            "if ($global -and !(is_admin)) { error \"Administrator rights are required to install $app.\"; exit 1 }",
+            "if ($global -and !(is_admin)) { error \"Administrator rights are required to install $app.\"; return }",
             "$fontInstallDir = if ($global) { (Join-Path $env:windir Fonts) } else { (Join-Path $env:LOCALAPPDATA Microsoft Windows Fonts) }",
             "$registryRoot = if ($global) { \"HKLM:\" } else { \"HKCU:\" }",
             "$registryBranch = (Join-Path SOFTWARE Microsoft 'Windows NT' CurrentVersion Fonts)",
@@ -29,7 +29,7 @@
     },
     "uninstaller": {
         "script": [
-            "if ($global -and !(is_admin)) { error \"Administrator rights are required to uninstall $app.\"; exit 1 }",
+            "if ($global -and !(is_admin)) { error \"Administrator rights are required to uninstall $app.\"; return }",
             "$fontInstallDir = if ($global) { (Join-Path $env:windir Fonts) } else { (Join-Path $env:LOCALAPPDATA Microsoft Windows Fonts) }",
             "$registryRoot = if ($global) { \"HKLM:\" } else { \"HKCU:\" }",
             "$registryBranch = (Join-Path SOFTWARE Microsoft 'Windows NT' CurrentVersion Fonts)",
