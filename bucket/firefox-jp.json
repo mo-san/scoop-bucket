@@ -1,5 +1,6 @@
 {
-    "version": "105.0.3",
+    "$schema": "https://raw.githubusercontent.com/lukesampson/scoop/master/schema.json",
+    "version": "106.0",
     "description": "Popular open source web browser with Japanese localization.",
     "homepage": "https://www.mozilla.org/firefox/",
     "license": "MPL-2.0",
@@ -11,12 +12,12 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://archive.mozilla.org/pub/firefox/releases/105.0.3/win64/ja/Firefox%20Setup%20105.0.3.exe#/dl.7z",
-            "hash": "sha512:c1d5796de616a8ddea3dcadd1ac14cfb7b5773afb160d92f131d83f4cd3944cec25f6cc35cbedb5673c57add4603055679439b44b09c6afbf9bb0c86b34f964a"
+            "url": "https://archive.mozilla.org/pub/firefox/releases/106.0/win64/ja/Firefox%20Setup%20106.0.exe#/dl.7z",
+            "hash": "sha512:fda728f015c1ef346f3f62be3c97a6bf6cc249b75b23b4ff8349f8e9aceac14a2e09e21e9029d1fab2829b855c81730564d2364f148df1f99309a2ed5a03f6d4"
         },
         "32bit": {
-            "url": "https://archive.mozilla.org/pub/firefox/releases/105.0.3/win32/ja/Firefox%20Setup%20105.0.3.exe#/dl.7z",
-            "hash": "sha512:180f47ea3290019a533a8a360b241b6a10d5957aecf7f7fe491d138d9a1365886709425a3508a06b59bbceea109a8fc4e059658568f23fc31e250dbeafe63a28"
+            "url": "https://archive.mozilla.org/pub/firefox/releases/106.0/win32/ja/Firefox%20Setup%20106.0.exe#/dl.7z",
+            "hash": "sha512:87f6b755229da159889b51fe7e20108297548c64c5f2c91fe805669c4d76aaf931cf68687a484115e331ec99732f6bd7656b9edb7b4dd33edfce5fb93c26e196"
         }
     },
     "extract_dir": "core",
