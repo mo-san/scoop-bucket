@@ -1,5 +1,4 @@
 {
-    "$schema": "https://raw.githubusercontent.com/lukesampson/scoop/master/schema.json",
     "version": "2.5.6.0",
     "description": "VieasEx: an image viewer",
     "homepage": "https://www.vieas.com/software/vieas.html",

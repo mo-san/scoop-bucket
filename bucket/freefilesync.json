@@ -1,5 +1,4 @@
 {
-    "$schema": "https://raw.githubusercontent.com/lukesampson/scoop/master/schema.json",
     "version": "11.26",
     "description": "a folder comparison and synchronization software",
     "homepage": "https://freefilesync.org",

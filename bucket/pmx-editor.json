@@ -1,5 +1,4 @@
 {
-    "$schema": "https://raw.githubusercontent.com/lukesampson/scoop/master/schema.json",
     "version": "0.2.7.3",
     "description": "an editor for \"PMX model files\", that can be used in MikuMikuDance (MMD) and its compatible applications",
     "homepage": "https://kkhk22.seesaa.net/category/14045227-1.html",

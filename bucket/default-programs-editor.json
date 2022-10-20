@@ -1,5 +1,4 @@
 {
-    "$schema": "https://raw.githubusercontent.com/lukesampson/scoop/master/schema.json",
     "version": "2.7.2676.2142",
     "description": "Default Programs Editor: fix file associations",
     "homepage": "https://defaultprogramseditor.com/",

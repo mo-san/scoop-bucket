@@ -1,5 +1,4 @@
 {
-    "$schema": "https://raw.githubusercontent.com/lukesampson/scoop/master/schema.json",
     "version": "2.6.1",
     "description": "Leeyes: image (comic) viewer 見開き画像ビューア",
     "homepage": "http://www3.tokai.or.jp/boxes/leeyes/",

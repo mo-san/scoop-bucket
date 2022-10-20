@@ -1,5 +1,4 @@
 {
-    "$schema": "https://raw.githubusercontent.com/lukesampson/scoop/master/schema.json",
     "version": "5.5.0",
     "description": "Downloads commodity market and other station data from the game 'Elite: Dangerous' for use with all popular online and offline trading tools.",
     "homepage": "https://github.com/EDCD/EDMarketConnector",

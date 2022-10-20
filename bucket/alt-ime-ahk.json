@@ -1,5 +1,4 @@
 {
-    "$schema": "https://raw.githubusercontent.com/lukesampson/scoop/master/schema.json",
     "version": "0.4.6",
     "description": "An AutoHotKey script to turn off/on Japanese IME by hitting left/right Alt key alone. // 左右 Alt キーの空打ちで IME を OFF/ON する AutoHotKey スクリプト",
     "homepage": "https://github.com/karakaram/alt-ime-ahk",

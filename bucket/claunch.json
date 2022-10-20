@@ -1,5 +1,4 @@
 {
-    "$schema": "https://raw.githubusercontent.com/lukesampson/scoop/master/schema.json",
     "version": "4.04",
     "description": "CLaunch: a skin-customizable button-based program launcher",
     "homepage": "https://hp.vector.co.jp/authors/VA018351/claunch.html",

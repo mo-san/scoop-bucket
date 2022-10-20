@@ -1,5 +1,4 @@
 {
-    "$schema": "https://raw.githubusercontent.com/lukesampson/scoop/master/schema.json",
     "version": "2.7.1",
     "description": "a composite font of Hack and GenJyuu-Gothic",
     "license": {

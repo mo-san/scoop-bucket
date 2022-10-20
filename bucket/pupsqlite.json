@@ -1,5 +1,4 @@
 {
-    "$schema": "https://raw.githubusercontent.com/lukesampson/scoop/master/schema.json",
     "version": "2.0.10.1",
     "description": "PupSQLite: Sqlite viewer and editor",
     "homepage": "https://www.eonet.ne.jp/~pup/software.html",

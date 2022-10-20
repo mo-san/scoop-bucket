@@ -1,5 +1,4 @@
 {
-    "$schema": "https://raw.githubusercontent.com/lukesampson/scoop/master/schema.json",
     "version": "105.0.3",
     "description": "Popular open source web browser with Japanese localization.",
     "homepage": "https://www.mozilla.org/firefox/",

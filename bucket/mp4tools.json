@@ -1,5 +1,4 @@
 {
-    "$schema": "https://raw.githubusercontent.com/lukesampson/scoop/master/schema.json",
     "version": "3.8",
     "homepage": "https://www.mp4joiner.org/",
     "license": "GPL-3.0-only",

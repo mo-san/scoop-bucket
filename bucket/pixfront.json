@@ -1,5 +1,4 @@
 {
-    "$schema": "https://raw.githubusercontent.com/lukesampson/scoop/master/schema.json",
     "version": "1.24",
     "description": "pixFront: a picture deskew tool",
     "homepage": "http://pixtopo.main.jp/front_en/index.html",

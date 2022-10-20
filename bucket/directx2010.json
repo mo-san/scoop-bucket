@@ -1,5 +1,4 @@
 {
-    "$schema": "https://raw.githubusercontent.com/lukesampson/scoop/master/schema.json",
     "version": "9.29.1974.1",
     "description": "The Microsoft DirectX End-User Runtime installs a number of runtime libraries from the legacy DirectX SDK for some games.",
     "homepage": "https://www.microsoft.com/en-us/download/details.aspx?id=8109",

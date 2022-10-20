@@ -1,5 +1,4 @@
 {
-    "$schema": "https://raw.githubusercontent.com/lukesampson/scoop/master/schema.json",
     "version": "1.50",
     "description": "Change Key: Substitutes keyboard keys",
     "homepage": "http://satoshi3.sakura.ne.jp/f_soft/dw_win.htm",

@@ -1,5 +1,4 @@
 {
-    "$schema": "https://raw.githubusercontent.com/lukesampson/scoop/master/schema.json",
     "version": "2.4.5",
     "description": "Cassava Editor: CSV Editor",
     "homepage": "https://www.asukaze.net/soft/cassava/",

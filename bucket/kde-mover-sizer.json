@@ -1,6 +1,5 @@
 {
     "##": "License is included in zip archive as 'free software license.nfo'",
-    "$schema": "https://raw.githubusercontent.com/lukesampson/scoop/master/schema.json",
     "version": "2.9",
     "description": "Move and resize Windows windows just like Linux!",
     "homepage": "https://corz.org/windows/software/accessories/KDE-resizing-moving-for-Windows.php",
