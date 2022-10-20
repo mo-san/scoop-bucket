@@ -121,6 +121,3 @@ Migu 1C, Migu 1M, Migu 1P, Migu 2M
 | `〜～`（波ダッシュ・全角チルダ）の区別                                                    |      -       |    ●    |    ●    |      -       |    ●    |    -    |
 | 数学記号や一部のギリシャ・ロシア文字が全角                                                |      -       |    -    |    -    |      -       |    ●    |    ●    |
 | JIS2004漢字字形                                                                           |      -       |    ●    |    ●    |      -       |    ●    |    ●    |
-
-[ZoomIt](https://docs.microsoft.com/en-us/sysinternals/downloads/zoomit)
-Presentation utility for zooming and drawing on the screen.
