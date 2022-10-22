@@ -65,8 +65,6 @@ This repository includes:
 ## Windows Sysinternals tools
 **Homepage:** <https://docs.microsoft.com/en-us/sysinternals>
 
-These manifests are forks from [mogeko's scoop-sysinternals repository](https://github.com/mogeko/scoop-sysinternals).
-
 | Package Name                                       | App Name         | Description                                                                                                                                                                                                                                                                                                                                                  | Website                                                                 |
 |----------------------------------------------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------|
 | [accesschk](./bucket/accesschk.json)               | AccessChk        | AccessChk is a command-line tool for viewing the effective permissions on files, registry keys, services, processes, kernel objects, and more.                                                                                                                                                                                                               | https://docs.microsoft.com/en-us/sysinternals/downloads/accesschk       |
