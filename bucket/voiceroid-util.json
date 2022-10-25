@@ -1,0 +1,24 @@
+{
+    "version": "0",
+    "description": "a tool that performs automatic operations on text-to-speech software such as the VOICEROID series.",
+    "homepage": "https://ruche-home.net/doc/voiceroid-util",
+    "license": {
+        "identifier": "MIT",
+        "url": "https://github.com/ruche7/VoiceroidUtil/blob/master/LICENSE"
+    },
+    "url": "-",
+    "hash": "0000000000000000000000000000000000000000000000000000000000000000",
+    "extract_dir": "-",
+    "bin": "VoiceroidUtil.exe",
+    "shortcuts": [
+        [
+            "VoiceroidUtil.exe",
+            "VoiceroidUtil"
+        ]
+    ],
+    "checkver": {
+    },
+    "autoupdate": {
+        "url": "$matchFileUrl"
+    }
+}
