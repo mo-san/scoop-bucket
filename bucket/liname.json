@@ -1,0 +1,39 @@
+{
+    "version": "20190131",
+    "description": "Rename files and folders using your favorite text editor.",
+    "homepage": "https://snca.net/",
+    "license": "Freeware",
+    "url": "https://ftp.vector.co.jp/71/28/2327/LiName20190131.zip",
+    "hash": "d04eb1d4080ecdf8a4416d6366ca60b04ff9494df1679792b8fc898660953231",
+    "pre_install": [
+        "ensure $persist_dir | Out-Null",
+        "@(",
+        "    'LiName.ini',",
+        "    'headu.txt',",
+        "    'tailu.txt'",
+        ") | ForEach-Object {",
+        "    if (-not (Test-Path (Join-Path $persist_dir $_))) {",
+        "        New-Item -Path (Join-Path $persist_dir $_) -ItemType File | Out-Null",
+        "    }",
+        "}"
+    ],
+    "bin": "LiName.exe",
+    "shortcuts": [
+        [
+            "LiName.exe",
+            "LiName"
+        ]
+    ],
+    "persist": [
+        "LiName.ini",
+        "headu.txt",
+        "tailu.txt"
+    ],
+    "checkver": {
+        "url": "https://www.vector.co.jp/soft/dl/winnt/util/se429883.html",
+        "regex": "<span class=\"version\">([^<]+)</span>"
+    },
+    "autoupdate": {
+        "url": "https://ftp.vector.co.jp/71/28/2327/LiName$version.zip"
+    }
+}
