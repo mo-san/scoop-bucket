@@ -35,6 +35,10 @@
             ]
         }
     },
+    "pre_install": [
+        "$file = (Join-Path (Join-Path $dir '_plugin') 'User')",
+        "if ((Test-Path $file) -and !(Test-Path (Join-Path $file '*'))) { Remove-Item $file }"
+    ],
     "persist": "_plugin\\User",
     "checkver": {
         "url": "https://kkhk22.seesaa.net/category/14045227-1.html",
