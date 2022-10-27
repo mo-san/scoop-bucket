@@ -1,10 +1,11 @@
 {
     "version": "2",
     "description": "Podesk: a virtual desktop switcher with only mouse moves",
-    "homepage": "https://forest.watch.impress.co.jp/library/software/podesk/",
-    "license": "",
-    "url": "https://dforest.watch.impress.co.jp/library/p/podesk/12042/Podesk2.zip#/dl.zip",
-    "hash": "3aa2c2f4338c487f32bb9b41d4a2332d5796bed2c7a9ac672f99dfd8b9810001",
+    "homepage": "https://www.vector.co.jp/soft/winnt/util/se518229.html",
+    "license": "Freeware",
+    "url": "https://ftp.vector.co.jp/74/63/2332/Podesk2.zip#/dl.zip",
+    "hash": "2fc14fd6e28e1729ce30a7ea73405363d0f55d7c45dd5b53e02ea81dc85a27c1",
+    "extract_dir": "Podesk2",
     "bin": "Podesk.exe",
     "shortcuts": [
         [
@@ -12,16 +13,15 @@
             "Podesk"
         ]
     ],
-    "pre_install": [
-        "Move-Item (Join-Path $dir Podesk2 *) $dir",
-        "Expand-InnoArchive -Path (Join-Path $dir PodeskSetup.exe) -DestinationPath $dir",
-        "Remove-Item  (Join-Path $dir PodeskSetup.exe), (Join-Path $dir Podesk2) -Force -Recurse"
-    ],
+    "installer": {
+        "script": "Expand-InnoArchive -Path (Join-Path $dir PodeskSetup.exe) -DestinationPath $dir -Removal"
+    },
     "checkver": {
-        "url": "https://forest.watch.impress.co.jp/library/software/podesk/",
-        "regex": "<dd>v([\\d.]+).*</dd>"
+        "url": "https://www.vector.co.jp/soft/dl/winnt/util/se518229.html",
+        "regex": "<span class=\"version\">([^<]+?)</span>"
     },
     "autoupdate": {
-        "url": "https://dforest.watch.impress.co.jp/library/p/podesk/12042/Podesk${version}.zip#/dl.zip"
+        "url": "https://ftp.vector.co.jp/74/63/2332/Podesk$version.zip#/dl.zip",
+        "extract_dir": "Podesk$version"
     }
 }
