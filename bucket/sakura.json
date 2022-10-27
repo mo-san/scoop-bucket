@@ -26,16 +26,19 @@
         "UserSubFolder=sakura",
         "\"@",
         "}",
-        "@(",
-        "    'my_appicon.ico',",
-        "    'my_icons.bmp',",
-        "    'my_grepicon.ico'",
-        ") | ForEach-Object {",
+        "'my_appicon.ico', 'my_icons.bmp', 'my_grepicon.ico' | ForEach-Object {",
         "    if (Test-Path (Join-Path $persist_dir $_)) {",
         "        $current = versiondir 'sakura' $version",
         "        New-Item -ItemType HardLink -Path (Join-Path $current $_) -Target (Join-Path $persist_dir $_) | Out-Null",
         "    }",
-        "}"
+        "}",
+        "",
+        "$appdatadir = Join-Path $env:APPDATA 'sakura'",
+        "if (Test-Path $appdatadir) {",
+        "    Rename-Item $appdatadir \"$appdatadir.original\"",
+        "    info \"Pre-existing user settings folder '%APPDATA%\\sakura' is renamed to '%APPDATA%\\sakura.original to avoid conflict.'\"",
+        "}",
+        "New-Item $appdatadir -ItemType Junction -Target $persist_dir | Out-Null"
     ],
     "persist": [
         "sakura.exe.ini",
@@ -56,9 +59,7 @@
         }
     },
     "notes": [
-        "1. The configuration file (sakura.ini) will be installed in user specific application data folder (i.e. %APPDATA%\\sakura) instead of 'persist' folder.",
-        "2. Tips: If you have 'my_appicon.ico', 'my_icons.bmp' or 'my_grepicon.ico' in 'persist' folder, they will be used as icon images in the app.",
-        "1. 設定ファイル (sakura.ini) は 'persist' ではなく ユーザーのアプリケーションデータフォルダー(%APPDATA%\\sakura)に保存されます。",
-        "2. ちなみに: 'persist' フォルダーに 'my_appicon.ico' や 'my_icons.bmp' や 'my_grepicon.ico' を置いておくと、アプリケーション内のアイコン画像として使えます。"
+        "Tips: If you have 'my_appicon.ico', 'my_icons.bmp' or 'my_grepicon.ico' in 'persist\\sakura' folder, they will be used as icon images in the app.",
+        "おまけ: 'persist\\sakura' フォルダーに 'my_appicon.ico' や 'my_icons.bmp' や 'my_grepicon.ico' を置いておくと、アプリ内のアイコン画像として使えます。"
     ]
 }
