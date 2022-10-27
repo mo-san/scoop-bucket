@@ -6,7 +6,10 @@
     "url": "http://satoshi3.sakura.ne.jp/f_soft/dw_win.files/ChgKey15.LZH",
     "hash": "7c3b76bfe92a33f12de55562074f56911540759e1568f58df75f14cf5939a6b9",
     "bin": [
-        ["ChgKey.exe", "ChangeKey"]
+        [
+            "ChgKey.exe",
+            "ChangeKey"
+        ]
     ],
     "shortcuts": [
         [
@@ -20,6 +23,6 @@
         "replace": "${1}"
     },
     "autoupdate": {
-        "url": "http://satoshi3.sakura.ne.jp/f_soft/dw_win.files/ChgKey${match2}${match3}.LZH"
+        "url": "http://satoshi3.sakura.ne.jp/f_soft/dw_win.files/ChgKey$match2$match3.LZH"
     }
 }

@@ -17,6 +17,6 @@
         "regex": "<a href=\"(?<url>[^\"]+-([0-9.]+)\\.zip)\">zip archive</a>"
     },
     "autoupdate": {
-        "url": "${matchUrl}"
+        "url": "$matchUrl"
     }
 }

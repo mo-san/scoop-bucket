@@ -34,7 +34,7 @@
         "regex": "<dd>v(.+)（.+</dd>"
     },
     "autoupdate": {
-        "url": "https://dforest.watch.impress.co.jp/library/f/flexrenamer/10463/FlexRena${cleanVersion}.zip",
-        "extract_dir": "FlexRena${cleanVersion}"
+        "url": "https://dforest.watch.impress.co.jp/library/f/flexrenamer/10463/FlexRena$cleanVersion.zip",
+        "extract_dir": "FlexRena$cleanVersion"
     }
 }

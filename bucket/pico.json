@@ -26,14 +26,12 @@
         "    New-Item -Path (Join-Path $persist_dir $file) -ItemType File | Out-Null",
         "}"
     ],
-    "persist": [
-        "settings.ini"
-    ],
+    "persist": "settings.ini",
     "checkver": {
         "url": "http://xration.sakura.ne.jp/htmls/program.htm",
         "regex": "PiCo\\s+v([\\d\\w.]+)"
     },
     "autoupdate": {
-        "url": "http://xration.sakura.ne.jp/images/program/PICO${cleanVersion}.lzh"
+        "url": "http://xration.sakura.ne.jp/images/program/PICO$cleanVersion.lzh"
     }
 }

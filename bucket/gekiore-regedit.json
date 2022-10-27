@@ -16,7 +16,7 @@
     "persist": "Settings",
     "checkver": {
         "url": "https://www.vector.co.jp/soft/dl/win95/util/se295314.html",
-        "regex": "<span class=\"version\">(.+)</span>"
+        "regex": "<span class=\"version\">([^<]+)</span>"
     },
     "autoupdate": {
         "url": "https://ftp.vector.co.jp/43/06/2157/GekiOreRegEdit.zip"

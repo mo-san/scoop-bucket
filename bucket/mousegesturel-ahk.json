@@ -11,9 +11,9 @@
     ],
     "checkver": {
         "url": "https://www.vector.co.jp/soft/dl/winnt/util/se498500.html",
-        "regex": "<span class=\"version\">(.+)</span>"
+        "regex": "<span class=\"version\">([^<]+)</span>"
     },
     "autoupdate": {
-        "url": "https://ftp.vector.co.jp/73/64/2332/MGLahk${cleanVersion}.zip"
+        "url": "https://ftp.vector.co.jp/73/64/2332/MGLahk$cleanVersion.zip"
     }
 }

@@ -22,7 +22,7 @@
     "persist": "CSpoit.ini",
     "checkver": {
         "url": "https://www.vector.co.jp/soft/dl/win95/art/se187189.html",
-        "regex": "<span class=\"version\">(.+)</span>"
+        "regex": "<span class=\"version\">([^<]+)</span>"
     },
     "autoupdate": {
         "url": "https://ftp.vector.co.jp/45/42/1859/cspoit.lzh"

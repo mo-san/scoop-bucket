@@ -30,13 +30,13 @@
         "    New-Item -Path (Join-Path $persist_dir $file) -ItemType File | Out-Null",
         "}",
         "",
-        "Move-Item -Path (Join-Path $dir 'AutoHotKey Source' *) -Destination $dir",
+        "Move-Item -Path (Join-Path $dir 'AutoHotKey Source' | Join-Path -ChildPath *) -Destination $dir",
         "Remove-Item -Path (Join-Path $dir 'AutoHotKey Source') -Recurse"
     ],
     "persist": "KDE_Mover-Sizer.ini",
     "checkver": {
         "script": [
-            "# We need to download the zip archive to retrieve a 'readme' inside and get the version number.",
+            "# We need to download the zip archive and retrieve a 'readme' inside to get the version number.",
             "$destDir = New-TemporaryFile | ForEach-Object { Remove-Item $_; mkdir $_ }",
             "$destPath = Join-Path $destDir 'KDE Mover-Sizer.nfo'",
             "$zipPath = Join-Path $destDir dl.zip",

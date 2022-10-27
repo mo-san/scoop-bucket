@@ -36,8 +36,8 @@
         }
     },
     "pre_install": [
-        "$file = (Join-Path (Join-Path $dir '_plugin') 'User')",
-        "if ((Test-Path $file) -and !(Test-Path (Join-Path $file '*'))) { Remove-Item $file }"
+        "$file = Join-Path $dir _plugin | Join-Path -ChildPath User",
+        "if ((Test-Path $file) -and !(Test-Path (Join-Path $file *))) { Remove-Item $file }"
     ],
     "persist": "_plugin\\User",
     "checkver": {
@@ -45,7 +45,7 @@
         "regex": "PMX[^<]+?([0-9.]+)"
     },
     "autoupdate": {
-        "url": "https://kkhk22.up.seesaa.net/tool/PmxEditor_${cleanVersion}.zip",
-        "extract_dir": "PmxEditor_${cleanVersion}"
+        "url": "https://kkhk22.up.seesaa.net/tool/PmxEditor_$cleanVersion.zip",
+        "extract_dir": "PmxEditor_$cleanVersion"
     }
 }

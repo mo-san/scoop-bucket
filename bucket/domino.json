@@ -18,6 +18,6 @@
         "regex": "<h4>Domino Ver.([\\d.]+)"
     },
     "autoupdate": {
-        "url": "https://takabosoft.com/download/win/domino/Domino${cleanVersion}.zip#/dl.zip"
+        "url": "https://takabosoft.com/download/win/domino/Domino$cleanVersion.zip#/dl.zip"
     }
 }

@@ -33,10 +33,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ss1.xrea.com/pyonkichi.g1.xrea.com/archives/cl64_${cleanVersion}.exe#/dl.7z"
+                "url": "https://ss1.xrea.com/pyonkichi.g1.xrea.com/archives/cl64_$cleanVersion.exe#/dl.7z"
             },
             "32bit": {
-                "url": "https://ss1.xrea.com/pyonkichi.g1.xrea.com/archives/cl${cleanVersion}.exe#/dl.7z"
+                "url": "https://ss1.xrea.com/pyonkichi.g1.xrea.com/archives/cl$cleanVersion.exe#/dl.7z"
             }
         }
     }

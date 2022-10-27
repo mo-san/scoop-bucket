@@ -12,7 +12,7 @@
             "",
             "$regex64 = '^Source:(?!.*not Is64BitInstallMode).+'",
             "$regex32 = '^Source:(?!.*\"Is64BitInstallMode).+'",
-            "$pattern = if ([Environment]::Is64BitOperatingSystem) { $regex64 } else { $regex32 }",
+            "$pattern = if ($architecture -eq '64bit') { $regex64 } else { $regex32 }",
             "$regex = '^Source: .(.+?).; DestDir: ..app.(.*?).; (?:DestName: .(.+?).; )?.*'",
             "",
             "Get-Content (Join-Path $dir install_script.iss) | Select-String -Pattern $pattern | ForEach-Object {",
@@ -20,7 +20,7 @@
             "    New-Item (Join-Path $dir (Split-Path $pair[1])) -Type Directory -Force | Out-Null",
             "    Copy-Item (Join-Path $dir $pair[0]) (Join-Path $dir $pair[1])",
             "}",
-            "@('{app}', 'dl.exe', 'install_script.iss') | ForEach-Object { Remove-Item (Join-Path $dir $_) -Recurse }"
+            "'{app}', 'dl.exe', 'install_script.iss' | ForEach-Object { Remove-Item (Join-Path $dir $_) -Recurse }"
         ]
     },
     "bin": "partitionwizard.exe",

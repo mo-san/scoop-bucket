@@ -4,7 +4,7 @@
     "homepage": "http://pixtopo.main.jp/front_en/index.html",
     "license": "",
     "url": "https://master.dl.sourceforge.net/project/pixfront/setup_pixfont_x64_1_24_en.msi",
-    "hash": "sha1:135894221244fb567ac928eca7fedb28ae808b1e",
+    "hash": "81268a526523b4994531a80a5ccd327b5aeabaff5edcac9883f22b429045ed7e",
     "bin": "QtFront.exe",
     "shortcuts": [
         [
@@ -17,6 +17,6 @@
         "regex": "<span class=\"version\">(.+)</span>"
     },
     "autoupdate": {
-        "url": "https://master.dl.sourceforge.net/project/pixfront/setup_pixfont_x64_${underscoreVersion}_en.msi"
+        "url": "https://master.dl.sourceforge.net/project/pixfront/setup_pixfont_x64_$underscoreVersion_en.msi"
     }
 }

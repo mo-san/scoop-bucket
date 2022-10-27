@@ -44,7 +44,7 @@
     ],
     "checkver": {
         "script": [
-            "# We need to download the zip archive to retrieve a 'readme' inside and get the version number.",
+            "# We need to download the zip archive and retrieve a 'readme' inside to get the version number.",
             "$web = Invoke-WebRequest -Uri https://sites.google.com/view/vpvp/",
             "$link32 = ($web.Links | ? {$_.outerHTML -like '*MikuMikuDance(DirectX9 Ver)*'}).href",
             "$link64 = ($web.Links | ? {$_.outerHTML -like '*MikuMikuDance(x64 Ver)*'}).href",
@@ -72,11 +72,11 @@
         "architecture": {
             "64bit": {
                 "url": "$matchLink64#/dl.7z",
-                "extract_dir": "MikuMikuDance_v${cleanVersion}x64"
+                "extract_dir": "MikuMikuDance_v$cleanVersionx64"
             },
             "32bit": {
                 "url": "$matchLink32#/dl.7z",
-                "extract_dir": "MikuMikuDance_v${cleanVersion}"
+                "extract_dir": "MikuMikuDance_v$cleanVersion"
             }
         }
     }

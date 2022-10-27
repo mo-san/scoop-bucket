@@ -22,8 +22,9 @@
     },
     "extract_dir": "core",
     "post_install": [
-        "ensure (Join-Path $persist_dir Profiles Scoop) | Out-Null",
-        "firefox -CreateProfile \"Scoop $(Join-Path $persist_dir Profiles Scoop)\"",
+        "$scoop_profile = Join-Path $persist_dir Profiles | Join-Path -ChildPath Scoop",
+        "ensure $scoop_profile | Out-Null",
+        "firefox -CreateProfile \"Scoop $scoop_profile\"",
         "$Addition = Join-Path $persist_dir addition",
         "if (Test-Path $Addition) {",
         "  info 'Copying additional items...'",

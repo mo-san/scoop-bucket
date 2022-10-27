@@ -32,10 +32,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://www.asukaze.net/soft/cassava/arc/Cassava${underscoreVersion}_64.zip"
+                "url": "https://www.asukaze.net/soft/cassava/arc/Cassava$underscoreVersion_64.zip"
             },
             "32bit": {
-                "url": "https://www.asukaze.net/soft/cassava/arc/Cassava${underscoreVersion}.zip"
+                "url": "https://www.asukaze.net/soft/cassava/arc/Cassava$underscoreVersion.zip"
             }
         }
     }
