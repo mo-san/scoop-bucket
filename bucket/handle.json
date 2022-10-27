@@ -5,9 +5,9 @@
         "identifier": "Freeware",
         "url": "https://docs.microsoft.com/en-us/sysinternals/license-terms"
     },
-    "version": "4.22",
+    "version": "5.0",
     "url": "https://download.sysinternals.com/files/Handle.zip",
-    "hash": "1f2e6eda07f0581c1cfac733f34005c9122c4d2a9d5e0b6d99797502a76ad79e",
+    "hash": "279aaf8eccb6f79147f4dcc6ba091fb895c4cb8b199a0dd186a4c76bc519d2cd",
     "checkver": {
         "url": "https://docs.microsoft.com/en-us/sysinternals/downloads/handle",
         "re": "Handle\\s(?:v|V)?([\\d.]+)"
