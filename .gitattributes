@@ -1,4 +1,4 @@
 # Auto detect text files and perform LF normalization
 * text=auto
-*.json text eol=lf
-*.md text eol=lf
+*.json text eol=lcrf
+*.md text eol=crlf
