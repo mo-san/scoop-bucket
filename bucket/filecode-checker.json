@@ -8,10 +8,8 @@
     "extract_dir": "FCChecker.1.2.0",
     "pre_install": [
         "ensure $persist_dir | Out-Null",
-        "$file = 'FCChecker.config'",
-        "if (-not (Test-Path (Join-Path $persist_dir $file))) {",
-        "    New-Item -Path (Join-Path $persist_dir $file) -ItemType File | Out-Null",
-        "}"
+        "$target = Join-Path $persist_dir 'FCChecker.config'",
+        "if (-not (Test-Path $target)) { New-Item -Path $target -ItemType File | Out-Null }"
     ],
     "bin": "FCChecker.exe",
     "shortcuts": [

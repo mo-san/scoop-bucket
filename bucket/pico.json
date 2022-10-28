@@ -21,10 +21,8 @@
     ],
     "pre_install": [
         "ensure $persist_dir | Out-Null",
-        "$file = 'settings.ini'",
-        "if (-not (Test-Path (Join-Path $persist_dir $file))) {",
-        "    New-Item -Path (Join-Path $persist_dir $file) -ItemType File | Out-Null",
-        "}"
+        "$target = Join-Path $persist_dir 'settings.ini'",
+        "if (-not (Test-Path $target)) { New-Item -Path $target -ItemType File | Out-Null }"
     ],
     "persist": "settings.ini",
     "checkver": {

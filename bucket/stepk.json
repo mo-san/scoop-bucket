@@ -20,10 +20,8 @@
         "Move-Item -Path (Join-Path $dir $arch | Join-Path -ChildPath *) -Destination $dir",
         "'x86', 'x64' | ForEach-Object { Remove-Item -Path (Join-Path $dir $_) -Recurse }",
         "",
-        "$file = 'SuperTagEditor.ini'",
-        "if (-not (Test-Path (Join-Path $persist_dir $file))) {",
-        "    New-Item -Path (Join-Path $persist_dir $file) -ItemType File | Out-Null",
-        "}"
+        "$target = Join-Path $persist_dir 'SuperTagEditor.ini'",
+        "if (-not (Test-Path $target)) { New-Item -Path $target -ItemType File | Out-Null }"
     ],
     "persist": [
         "SuperTagEditor.ini"

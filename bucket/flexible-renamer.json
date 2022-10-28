@@ -15,12 +15,12 @@
     ],
     "pre_install": [
         "ensure $persist_dir | Out-Null",
-        "$path = (Join-Path $persist_dir 'Flexible Renamer.ini')",
-        "if (-not (Test-Path $path)) { New-Item -Path $path -ItemType File | Out-Null }",
+        "$target = Join-Path $persist_dir 'Flexible Renamer.ini'",
+        "if (-not (Test-Path $target)) { New-Item -Path $target -ItemType File | Out-Null }",
         "",
         "# Create empty text file as UTF16 with BOM",
-        "$path = (Join-Path $persist_dir 'Rename.log')",
-        "if (-not (Test-Path $path)) { Set-Content -Value '' -Path $path -Encoding unicode -NoNewline }"
+        "$target = Join-Path $persist_dir 'Rename.log'",
+        "if (-not (Test-Path $target)) { Set-Content -Value '' -Path $target -Encoding unicode -NoNewline }"
     ],
     "persist": [
         "Flexible Renamer.ini",

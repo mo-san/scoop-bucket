@@ -25,10 +25,8 @@
     ],
     "pre_install": [
         "ensure $persist_dir | Out-Null",
-        "$file = 'KDE_Mover-Sizer.ini'",
-        "if (-not (Test-Path (Join-Path $persist_dir $file))) {",
-        "    New-Item -Path (Join-Path $persist_dir $file) -ItemType File | Out-Null",
-        "}",
+        "$target = Join-Path $persist_dir 'KDE_Mover-Sizer.ini'",
+        "if (-not (Test-Path $target)) { New-Item -Path $target -ItemType File | Out-Null }",
         "",
         "Move-Item -Path (Join-Path $dir 'AutoHotKey Source' | Join-Path -ChildPath *) -Destination $dir",
         "Remove-Item -Path (Join-Path $dir 'AutoHotKey Source') -Recurse"
