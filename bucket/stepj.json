@@ -1,6 +1,6 @@
 {
     "version": "1.02",
-    "description": "Spreadsheet style FLAC, MP3 music tag editor for Windows.",
+    "description": "STEP_J: a mp3 tag editor with spreadsheet-like operations (the successor to STEP_K)",
     "homepage": "https://github.com/jarupxx/STEP_J",
     "license": "GPL-2.0-only",
     "architecture": {

@@ -59,6 +59,7 @@ This repository includes:
 | [pupsqlite](./bucket/pupsqlite.json) | PupSQLite | SQLite viewer and editor | https://www.eonet.ne.jp/~pup/software.html |
 | [ralpha](./bucket/ralpha.json) | Ralpha Image Resizer | a batch image conversion tool | http://nilposoft.info/ralpha/index.html |
 | [sakura](./bucket/sakura.json) | Sakura Editor (サクラエディタ) | a text editor | https://sakura-editor.github.io/ |
+| [stepj](./bucket/stepj.json) | STEP_J | mp3 tag editor with spreadsheet-like operation (the successor to STEP_K) | https://github.com/jarupxx/STEP_J |
 | [stepk](./bucket/stepk.json) | STEP_K | mp3 tag editor with spreadsheet-like operation | https://kobarin.sakura.ne.jp/ |
 | [vb6runtime](./bucket/vb6runtime.json) | Visual Basic 6.0 SP6 runtime files | | https://www.vector.co.jp/soft/dl/win95/util/se342080.html |
 | [vieasex](./bucket/vieasex.json) | VieasEx | Image viewer | https://www.vieas.com/software/vieas.html |
