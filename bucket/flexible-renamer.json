@@ -3,7 +3,7 @@
     "description": "Flexible Renamer",
     "homepage": "https://hp.vector.co.jp/authors/VA014830/FlexRena/",
     "license": "Freeware",
-    "url": "https://dforest.watch.impress.co.jp/library/f/flexrenamer/10463/FlexRena84.zip",
+    "url": "https://ftp.vector.co.jp/54/28/2327/FlexRena84.zip",
     "hash": "5cf6db71126af9dbc17eb652a08a6aaf340bf80b5768c3de21876eaaeeebe616",
     "extract_dir": "FlexRena84",
     "bin": "Flexible Renamer.exe",
@@ -15,26 +15,23 @@
     ],
     "pre_install": [
         "ensure $persist_dir | Out-Null",
-        "$file = 'Flexible Renamer.ini'",
-        "if (-not (Test-Path (Join-Path $persist_dir $file))) {",
-        "    New-Item -Path (Join-Path $persist_dir $file) -ItemType File | Out-Null",
-        "}",
-        "$file = 'Rename.log'",
-        "if (-not (Test-Path (Join-Path $persist_dir $file))) {",
-        "    # Create empty text file as UTF16 with BOM",
-        "    Set-Content -Value '' -Path (Join-Path $persist_dir $file) -Encoding unicode -NoNewline",
-        "}"
+        "$path = (Join-Path $persist_dir 'Flexible Renamer.ini')",
+        "if (-not (Test-Path $path)) { New-Item -Path $path -ItemType File | Out-Null }",
+        "",
+        "# Create empty text file as UTF16 with BOM",
+        "$path = (Join-Path $persist_dir 'Rename.log')",
+        "if (-not (Test-Path $path)) { Set-Content -Value '' -Path $path -Encoding unicode -NoNewline }"
     ],
     "persist": [
         "Flexible Renamer.ini",
         "Rename.log"
     ],
     "checkver": {
-        "url": "https://forest.watch.impress.co.jp/library/software/flexrenamer/",
-        "regex": "<dd>v(.+)（.+</dd>"
+        "url": "https://www.vector.co.jp/soft/dl/winnt/util/se131133.html",
+        "regex": "<span class=\"version\">([^<]+)</span>"
     },
     "autoupdate": {
-        "url": "https://dforest.watch.impress.co.jp/library/f/flexrenamer/10463/FlexRena$cleanVersion.zip",
+        "url": "https://ftp.vector.co.jp/54/28/2327/FlexRena$cleanVersion.zip",
         "extract_dir": "FlexRena$cleanVersion"
     }
 }
