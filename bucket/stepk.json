@@ -8,14 +8,22 @@
     "extract_dir": "STEP_K_105a",
     "pre_install": [
         "ensure $persist_dir | Out-Null",
-        "",
-        "$arch = if ($architecture -eq '64bit') { 'x64' } else { 'x86' }",
-        "Move-Item -Path (Join-Path $dir $arch | Join-Path -ChildPath *) -Destination $dir",
-        "'x86', 'x64' | ForEach-Object { Remove-Item -Path (Join-Path $dir $_) -Recurse }",
-        "",
         "$target = Join-Path $persist_dir 'SuperTagEditor.ini'",
         "if (-not (Test-Path $target)) { New-Item -Path $target -ItemType File | Out-Null }"
     ],
+    "architecture": {
+        "64bit": {
+            "installer": {
+                "script": "Move-Item -Path (Join-Path $dir x64 | Join-Path -ChildPath *) -Destination $dir"
+            }
+        },
+        "32bit": {
+            "installer": {
+                "script": "Move-Item -Path (Join-Path $dir x86 | Join-Path -ChildPath *) -Destination $dir"
+            }
+        }
+    },
+    "post_install": "'x86', 'x64' | ForEach-Object { Remove-Item -Path (Join-Path $dir $_) -Recurse }",
     "bin": [
         [
             "SuperTagEditor.exe",

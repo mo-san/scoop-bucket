@@ -4,8 +4,12 @@
     "homepage": "https://www.partitionwizard.com",
     "license": "Proprietary",
     "depends": "innounp",
-    "url": "https://cdn2.minitool.com/?p=pw&e=pw-free-offline#/dl.exe",
-    "hash": "8aa8731b0953bcdf336b580faac8b865e235ca3bfc94dab458b21947da4ad51f",
+    "architecture": {
+        "64bit": {
+            "url": "https://cdn2.minitool.com/?p=pw&e=pw-free-offline#/dl.exe",
+            "hash": "8aa8731b0953bcdf336b580faac8b865e235ca3bfc94dab458b21947da4ad51f"
+        }
+    },
     "installer": {
         "script": [
             "innounp -x \"-d$dir\" (Join-Path $dir dl.exe) | Out-Null",
@@ -35,6 +39,10 @@
         "regex": "<h2>V([0-9.]+)\\s*<span class=\"upgrade-history-date\">"
     },
     "autoupdate": {
-        "url": "https://cdn2.minitool.com/?p=pw&e=pw-free-offline#/dl.exe"
+        "architecture": {
+            "64bit": {
+                "url": "https://cdn2.minitool.com/?p=pw&e=pw-free-offline#/dl.exe"
+            }
+        }
     }
 }
