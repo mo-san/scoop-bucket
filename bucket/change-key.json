@@ -18,8 +18,8 @@
         ]
     ],
     "checkver": {
-        "url": "https://forest.watch.impress.co.jp/library/software/changekey/",
-        "regex": "<dd>v(([0-9]+)\\.([0-9]+?)0).+</dd>",
+        "url": "http://satoshi3.sakura.ne.jp/f_soft/dw_win.htm",
+        "regex": "Change Key</p>\\s*?<p align=\"center\">v(([0-9]+)\\.([0-9]+?)0)</p>",
         "replace": "${1}"
     },
     "autoupdate": {
