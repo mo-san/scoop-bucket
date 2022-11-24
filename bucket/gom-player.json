@@ -1,10 +1,10 @@
 {
-    "version": "2.3.80.5345",
+    "version": "2.3.81.5346",
     "description": "a free video player that allows you to play videos in various formats through an integrated codec, find subtitles, and watch 360-degree VR videos.",
     "homepage": "https://www.gomlab.com/gomplayer-media-player/",
     "license": "Proprietary",
     "url": "https://cdn.gomlab.com/gretech/player/GOMPLAYERGLOBALSETUP_CHROME.EXE#/dl.7z",
-    "hash": "b2cd23f27f12cd9da0ff3fd6f38670547a1388e08ea0b3369ddcb72626c99d64",
+    "hash": "05aa545d5d3dfd9f02cf3fc06075229bd622e1765d5bb0d73ee174a7b7a9aa2d",
     "bin": "GOM.EXE",
     "shortcuts": [
         [
