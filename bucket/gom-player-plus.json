@@ -1,12 +1,12 @@
 {
-    "version": "2.3.80.5345",
+    "version": "2.3.81.5346",
     "description": "an ad-free premium video player optimized for high-definition video playback such as UHD, 4K, etc. (paid version for gom-player; license needed)",
     "homepage": "https://www.gomlab.com/gomplayerplus-media-player/",
     "license": "Proprietary",
     "architecture": {
         "64bit": {
             "url": "https://cdn2.gomlab.com/gretech/player64/new/GOMPlayerPlusGlobalSetup.exe#/dl.7z",
-            "hash": "a229df0f1f8d8de0ba096fa5cb9fe20e80604760e2046b531b62b0d34aa06762",
+            "hash": "5817cfb0ffe3edb9868429b26f727703d7c7793cb80c32aa97e1598666f09a45",
             "bin": "GOM64.EXE",
             "shortcuts": [
                 [
@@ -17,7 +17,7 @@
         },
         "32bit": {
             "url": "https://cdn2.gomlab.com/gretech/player/plus/new/GOMPlayerPlusGlobalSetup.exe#/dl.7z",
-            "hash": "1b75e6c9ea318bcd6e15face4d1d07faa4f78dd08bad6c2b7eba53bdc56eb6c5",
+            "hash": "38ba758f3353a986f9237e1a49719d8e7e1938abf54423a65d0b7b7a4dcbb92a",
             "bin": "GOM.EXE",
             "shortcuts": [
                 [
