@@ -5,9 +5,9 @@
         "identifier": "Freeware",
         "url": "https://docs.microsoft.com/en-us/sysinternals/license-terms"
     },
-    "version": "1.81",
+    "version": "1.82",
     "url": "https://download.sysinternals.com/files/Contig.zip",
-    "hash": "dcdec06387efb2eedcd0f3ccaff557b49cf55fb6f44603fe5eb603ba3b2e6a15",
+    "hash": "7f7fb8e36ef3718439e88efb0750de9d66c29053f5e367a6a79273d329165540",
     "checkver": {
         "url": "https://docs.microsoft.com/en-us/sysinternals/downloads/contig",
         "re": "Contig\\s(?:v|V)?([\\d.]+)"
