@@ -15,5 +15,5 @@ trim_trailing_whitespace = true
 [*.{yml,yaml}]
 indent_size = 2
 
-[*.{json,json5}]
+[*.json5]
 indent_size = 2

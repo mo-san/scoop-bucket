@@ -34,11 +34,15 @@
         "}",
         "",
         "$appdatadir = Join-Path $env:APPDATA 'sakura'",
-        "if (Test-Path $appdatadir) {",
-        "    Rename-Item $appdatadir \"$appdatadir.original\"",
+        "$isJunction = 'Junction' -eq (Get-ChildItem $env:APPDATA -Filter 'sakura').LinkType",
+        "if ((Test-Path $appdatadir) -and -not $isJunction) {",
+        "    $date = (Get-Date -Format \"yyyyMMdd_HHmmss\")",
+        "    Rename-Item -Path $appdatadir -NewName ($appdatadir -replace '$', \".$date.original\")",
         "    info \"Pre-existing user settings folder '%APPDATA%\\sakura' is renamed to '%APPDATA%\\sakura.original to avoid conflict.'\"",
         "}",
-        "New-Item $appdatadir -ItemType Junction -Target $persist_dir | Out-Null"
+        "if (-not (Test-Path $appdatadir)) {",
+        "    New-Item $appdatadir -ItemType Junction -Target $persist_dir | Out-Null",
+        "}"
     ],
     "persist": [
         "sakura.exe.ini",
