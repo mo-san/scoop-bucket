@@ -5,9 +5,9 @@
         "identifier": "Freeware",
         "url": "https://docs.microsoft.com/en-us/sysinternals/license-terms"
     },
-    "version": "14.13",
+    "version": "14.14",
     "url": "https://download.sysinternals.com/files/Sysmon.zip",
-    "hash": "23b123ce3400b938e6a7d29dd5ba6f54772c4cde6796ef760b6572df7f7a34f6",
+    "hash": "878fa596b2b8f0080c716d1840c0fcf3cebb46ebabe5b169f6cb40bbf81d9aef",
     "checkver": {
         "url": "https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon",
         "re": "Sysmon\\s(?:v|V)?([\\d.]+)"
