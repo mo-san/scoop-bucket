@@ -5,9 +5,9 @@
         "identifier": "Freeware",
         "url": "https://docs.microsoft.com/en-us/sysinternals/license-terms"
     },
-    "version": "2.53",
+    "version": "2.6",
     "url": "https://download.sysinternals.com/files/PSTools.zip",
-    "hash": "102576f2df817427fee2804380ef8904afb7b46d73d56d1a60e7721d668b6555",
+    "hash": "e77aca05e8a6a4d2d92c99e77ca04b883edc32a1726b3eb6c73d0d56f66935d6",
     "pre_install": "Get-ChildItem \"$dir\" | Where-Object {($_.Name -notlike 'psshutdown*') -and ($_.Name -notlike 'Eula.txt') -and $_.Name -notlike '*.chm'} | Remove-Item",
     "checkver": {
         "url": "https://docs.microsoft.com/en-us/sysinternals/downloads/psshutdown",
