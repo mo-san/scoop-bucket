@@ -5,9 +5,9 @@
         "identifier": "Freeware",
         "url": "https://docs.microsoft.com/en-us/sysinternals/license-terms"
     },
-    "version": "2.42",
+    "version": "2.43",
     "url": "https://download.sysinternals.com/files/PSTools.zip",
-    "hash": "e77aca05e8a6a4d2d92c99e77ca04b883edc32a1726b3eb6c73d0d56f66935d6",
+    "hash": "a9ca77dfe03ce15004157727bb43ba66f00ceb215362c9b3d199f000edaa8d61",
     "pre_install": "Get-ChildItem \"$dir\" | Where-Object {($_.Name -notlike 'PsExec*') -and ($_.Name -notlike 'Eula.txt') -and $_.Name -notlike '*.chm'} | Remove-Item",
     "checkver": {
         "url": "https://docs.microsoft.com/en-us/sysinternals/downloads/psexec",
