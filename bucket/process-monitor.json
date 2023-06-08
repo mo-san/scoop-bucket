@@ -5,9 +5,9 @@
         "identifier": "Freeware",
         "url": "https://docs.microsoft.com/en-us/sysinternals/license-terms"
     },
-    "version": "3.93",
+    "version": "3.94",
     "url": "https://download.sysinternals.com/files/ProcessMonitor.zip",
-    "hash": "6109db66458f42f4c75470bfe12bd8a695da4189f5438b3b4ecd6fca2625fc73",
+    "hash": "52605d4059d0c7754eb3e89debb7199273252b4dcace5947664dd4d58082748b",
     "checkver": {
         "url": "https://docs.microsoft.com/en-us/sysinternals/downloads/procmon",
         "re": "Process Monitor\\s(?:v|V)?([\\d.]+)"
